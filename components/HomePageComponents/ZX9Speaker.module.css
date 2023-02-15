@@ -16,6 +16,7 @@
 
 .speakerImg {
   height: 400px;
+  width: 360px;
 }
 .speakerImage {
   height: 392px;
@@ -63,6 +64,8 @@
   .speakerImage {
     left: 36%;
     top: 10%;
+    height: 210px;
+    width: 200px;
   }
   .speakerImg {
     height: 200px;
@@ -100,6 +103,8 @@
   .speakerImage {
     left: 25%;
     top: 10%;
+    height: 200px;
+    width: 170px;
 }
 .speakerContent {
 

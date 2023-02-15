@@ -12,7 +12,7 @@ const ZX9Speaker = () => {
               src={"/images/image-speaker-zx9.png"}
               alt={"ZX9 speaker"}
               className={classes.speakerImg}
-              width={400}
+              width={360}
               height={400}
             />
           </div>

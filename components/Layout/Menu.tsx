@@ -29,6 +29,8 @@ const Menu = () => {
                 src={"/images/image-category-thumbnail-headphones.png"}
                 alt={"headphones"}
                 className={classes.image}
+                width={100}
+                height={100}
               />
 
               <h3 className={classes.catTitle}>Headphones</h3>
@@ -43,6 +45,8 @@ const Menu = () => {
                 src={"/images/image-category-thumbnail-speakers.png"}
                 alt={"speakers"}
                 className={classes.image}
+                width={100}
+                height={100}
               />
 
               <h3 className={classes.catTitle}>Speakers</h3>
@@ -57,6 +61,8 @@ const Menu = () => {
                 src={"/images/image-category-thumbnail-earphones.png"}
                 alt={"earphones"}
                 className={classes.image}
+                width={100}
+                height={100}
               />
 
               <h3 className={classes.catTitle}>Earphones</h3>
