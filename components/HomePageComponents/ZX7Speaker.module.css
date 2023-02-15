@@ -1,0 +1,68 @@
+.wrapper {
+  width: 1110px;
+  height: 320px;
+  background-image: url("/images/image-speaker-zx7.jpg");
+  border-radius: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+
+
+.content {
+ display: flex;
+ flex-flow: column nowrap;
+ justify-content: center;
+ align-items: flex-start;
+ margin-left: 5rem;
+}
+.content h2 {
+  text-transform: uppercase;
+  font-size: 40px;
+  letter-spacing: 1.5px;
+  line-height: 44px;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 168px;
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        width: 689px;
+        height: 320px;
+        background-image: url("/images/image-speaker-zx7-tablet.jpg");
+    }
+    .content {
+        margin-left: 3rem;
+    }
+    .content h2 {
+        font-size: 32px;
+        line-height: 36px;
+        letter-spacing: 1.25px;
+    }
+    .box {
+      margin-top: 6rem;
+    }
+  
+}
+@media (max-width:375px) {
+  .wrapper {
+    width: 327px;
+    height: 320px;
+    background-image: url("/images/image-speaker-zx7-mobile.jpg");
+    background-size: cover;
+
+  }
+  .content {
+    margin-left: 1rem;
+}
+.content div {
+  width: 90%;
+}
+
+}

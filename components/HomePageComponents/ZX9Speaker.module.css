@@ -1,0 +1,119 @@
+.box {
+  width: 1110px;
+  height: 560px;
+  background-color: #d87d4a;
+  position: relative;
+  border: 1px solid #d87d4a;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 168px;
+}
+
+.speakerImg {
+  height: 400px;
+}
+.speakerImage {
+  height: 392px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  left: 10%;
+  top: 29.9%;
+  overflow: hidden;
+}
+.speakerContent {
+  position: absolute;
+  z-index: 3;
+  left: 59%;
+  bottom: 15%;
+  width: 350px;
+  color: #fff;
+}
+.speakerContent h1 {
+  font-size: 56px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 58px;
+  margin-bottom: 30px;
+}
+.circles {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  top: 0.1%;
+  right: 30%;
+
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    margin-top: 1rem;
+  }
+  .box {
+    width: 689px;
+    height: 720px;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  .speakerImage {
+    left: 36%;
+    top: 10%;
+  }
+  .speakerImg {
+    height: 200px;
+  }
+  .speakerContent {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    left: 36%;
+    bottom: 15%;
+    width: 250px;
+  }
+  .speakerContent h1 {
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: 1.5px;
+  }
+  .speakerContent p {
+    font-size: 12px;
+    line-height: 22px;
+  }
+  .circles {
+    right: -17%;
+    top: -42%;
+  }
+}
+@media (max-width: 375px) {
+  .box {
+    width: 327px;
+    height: 600px;
+  }
+  .wrapper {
+    margin-top: 6rem;
+  }
+  .speakerImage {
+    left: 25%;
+    top: 10%;
+}
+.speakerContent {
+
+  left: 10%;
+  bottom: 6%;
+  width: 250px;
+  text-align: center;
+}
+.speakerContent div {
+  display: flex;
+  justify-content: center;
+}
+.circles {
+  left: -90%;
+  top: -42%;
+}
+}

@@ -1,0 +1,64 @@
+.sumWrapper {
+  display: flex;
+  width: 30rem;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 3rem;
+}
+.sumImg img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+.sumContent {
+  width: 7rem;
+  margin-left: 3rem;
+}
+.sumQty {
+  margin-left: 3rem;
+  color: #ccc;
+  font-weight: 900;
+}
+
+@media (max-width:768px) {
+  .sumWrapper {
+    width: 698px;
+    margin-left: 0;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .sumImg {
+  margin-left: 3rem;
+  }
+  .sumContent {
+    margin-left: 0;
+    margin-right: 19rem;
+    padding-bottom: 1rem;
+  }
+  .sumQty {
+    margin-right: 3rem;
+    
+  }
+}
+
+@media (max-width:375px) {
+  .sumWrapper {
+    width: 327px;
+    justify-content: center;
+   
+  }
+  .sumImg {
+    margin-left: 0;
+    margin-right: 1rem;
+    }
+  .sumContent {
+    margin-left: 0;
+    margin-right: 0rem;
+  
+  }
+  .sumQty {
+    margin-right: 0;
+    
+  }
+}

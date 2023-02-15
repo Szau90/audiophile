@@ -1,0 +1,25 @@
+.card {
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    width: 1110px;
+    height: 560px;
+    margin-top: 160px;
+    position: relative;
+
+   
+  }
+
+  @media (max-width:768px) {
+    .card {
+      width: 689px;
+      height: fit-content;
+      margin-top: 5rem;
+    }
+  }
+
+  @media (max-width:375px) {
+    .card {
+      width: 327px;
+      box-shadow: none;
+    }
+  }

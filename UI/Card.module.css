@@ -1,0 +1,15 @@
+.card {
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  width: 540px;
+  height: fit-content;
+  max-height: 1500px;
+  position: relative;
+  border-radius: 10px;
+}
+
+@media (max-width:375px) {
+  .card {
+    width: 327px;
+  }
+}

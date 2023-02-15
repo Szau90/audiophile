@@ -1,0 +1,14 @@
+.cash {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+    margin-top: 1rem;
+   
+  }
+  .cash span {
+    width: 85%;
+    margin-left: 1rem;
+    color: #979797;
+  
+  }

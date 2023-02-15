@@ -1,0 +1,199 @@
+.checkoutBox {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  width: 45rem;
+  max-height: fit-content;
+  margin-left: 3rem;
+}
+.control input[type="number"]::-webkit-outer-spin-button,
+.control input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.control input[type="number"] {
+    appearance: textfield;
+}
+
+
+.checkoutBox h1 {
+  padding-top: 1rem;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+.checkoutBox h4 {
+  margin-left: 2rem;
+  color: #d87d4a;
+  text-transform: uppercase;
+}
+.form h4 {
+  margin-left: 1rem;
+}
+
+.form {
+  padding: 1rem;
+}
+.control {
+  margin-bottom: 0.5rem;
+}
+
+.control label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+  margin-top: 2rem;
+}
+
+.control input {
+  
+  display: block;
+  font: inherit;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 0.25rem;
+  width: 20rem;
+  height: 3rem;
+  margin-left: 1rem;
+}
+.control input:focus {
+  outline: none;
+  border: 1px solid #d87d4a;
+}
+
+.inputGrp {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+
+}
+.address label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+  margin-top: 2rem;
+}
+.address input {
+  display: block;
+  font: inherit;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 0.25rem;
+  width: 41rem;
+  height: 3rem;
+  margin-left: 1rem;
+}
+.address input:focus {
+  outline: none;
+  border: 1px solid #d87d4a;
+}
+.radioGrp {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.radio {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  align-items: center;
+  height: 3rem;
+  width: 20rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+}
+.radio:hover,
+.radio:active {
+  border: 1px solid #d87d4a;
+}
+.radio input {
+  margin-left: 1rem;
+  accent-color: #d87d4a;  
+  
+}
+
+.radio label {
+  font: inherit;
+  width: 20rem;
+  margin-left: 1rem;
+}
+.form h5 {
+  display: inline;
+  margin-left: 1rem;
+  width: 10rem;
+  align-items: flex-end;
+}
+.payment label {
+  position: absolute;
+  margin-left: 1rem;
+  margin-top: 1rem;
+ 
+}
+.cash {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  justify-content: center;
+  margin-top: 1rem;
+ 
+}
+.cash span {
+  width: 85%;
+  margin-left: 1rem;
+
+}
+
+@media (max-width:768px) {
+  .checkoutBox {
+    width: 698px;
+    margin: 0;
+  }
+  .control {
+    width: 50%;
+  }
+}
+@media (max-width:375px) {
+  .checkoutBox {
+    width: 327px;
+    margin-left: 0;
+  }
+  .control {
+    width: 100%;
+  }
+  .control input {
+    width: 90%;
+  }
+  .inputGrp {
+    display: flex;
+    flex-flow: column nowrap;
+   
+  }
+  .address {
+    width: 327px;
+  }
+  .address input {
+    width: 80%;
+  }
+  .payment {
+    width: 327px;
+  }
+  .payment label {
+    display: block;
+    position: static;
+    margin-bottom: 1rem;
+  }
+
+  .radio {
+    width: 90%;
+  }
+  .form h4 {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+}
+
+
+

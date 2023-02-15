@@ -1,0 +1,12 @@
+.button {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:active {
+  color: #d87d4a;
+}
+

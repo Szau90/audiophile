@@ -1,0 +1,36 @@
+.wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.title {
+    width: 1110px;
+    text-align: center;
+    margin-top: 10%;
+}
+.btn {
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.btn div{
+    width: 22rem;
+    margin-top: 10%;
+}
+
+@media (max-width:768px) {
+    .title {
+        width: 768px;
+    }
+}
+
+@media (max-width:375px) {
+    .title {
+        width: 327px;
+        font-size: 25px;
+    }
+}

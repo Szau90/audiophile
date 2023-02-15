@@ -1,0 +1,23 @@
+.cartCard {
+    background-color: white;
+    border-radius: 5px;
+    width: 400px;
+    height: 600px;
+    max-height: fit-content;
+    margin-left: 5rem;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width:768px) {
+    .cartCard {
+        width: 377px;
+        height: 488px;
+    }
+}
+@media (max-width:375px) {
+    .cartCard {
+        width: 327px;
+        height: 488px;
+    }
+}
