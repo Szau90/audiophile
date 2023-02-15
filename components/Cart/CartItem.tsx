@@ -1,6 +1,7 @@
 import classes from "./CartItem.module.css";
 import { useAppDispatch } from "../../Hooks/hooks";
 import { cartActions } from "../../store/cart-slice";
+import Image from "next/image";
 
 const CartItem: React.FC<{
   title: string;
@@ -44,8 +45,10 @@ const CartItem: React.FC<{
   };
   return (
     <li className={classes.item}>
+
+      <Image src={cartImg} alt={title} />
     
-      <img src={cartImg} alt={title} />
+
    
       <div>
       <h3>{shortName}</h3>

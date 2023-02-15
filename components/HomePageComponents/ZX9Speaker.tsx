@@ -1,6 +1,6 @@
 import BlackProductButton from "../UI/BlackProductButton";
 import classes from "./ZX9Speaker.module.css";
-
+import Image from "next/image";
 
 const ZX9Speaker = () => {
   return (
@@ -8,8 +8,9 @@ const ZX9Speaker = () => {
       <div className={classes.wrapper}>
         <div className={classes.box}>
           <div className={classes.speakerImage}>
-            <img
-              src="/images/image-speaker-zx9.png"
+            <Image
+              src={"/images/image-speaker-zx9.png"}
+              alt={"ZX9 speaker"}
               className={classes.speakerImg}
             />
           </div>
@@ -24,13 +25,17 @@ const ZX9Speaker = () => {
           </div>
 
           <div className={classes.speakerContent}>
-            <h1>ZX9<br/>speaker</h1>
+            <h1>
+              ZX9
+              <br />
+              speaker
+            </h1>
             <p>
               Upgrade to premium speakers that are phenomenally built to deliver
               truly remarkable sound.
             </p>
             <div>
-            <BlackProductButton link='/speakers/zx9-speaker'/>
+              <BlackProductButton link="/speakers/zx9-speaker" />
             </div>
           </div>
         </div>

@@ -5,6 +5,7 @@ import ProductButton from "../UI/ProductButton";
 import Link from "next/link";
 import { useEffect } from "react";
 import { sendCartData } from "../../store/cart-actions";
+import Image from "next/image";
 
 let isInitial = false;
 
@@ -65,7 +66,7 @@ const ProductItem: React.FC<{
       <div className={classes.mainWrapper}>
         <div className={classes.container}>
           <div className={classes.image}>
-            <img src={image} alt={title} />
+            <Image src={image} alt={title} />
           </div>
           <div className={classes.content}>
             <h1>{title}</h1>

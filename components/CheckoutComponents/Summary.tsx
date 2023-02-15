@@ -1,4 +1,5 @@
-import classes from "./Summary.module.css"
+import classes from "./Summary.module.css";
+import Image from "next/image";
 
 const Summary: React.FC<{
   title: string;
@@ -11,20 +12,21 @@ const Summary: React.FC<{
   const { title, quantity, price, cartImg } = props;
   return (
     <>
-
-    <li>
-    <div className={classes.sumWrapper}>
-      <div className={classes.sumImg}>
-        <img src={cartImg} alt={title} />
-      </div>
-      <div className={classes.sumContent}>
-        <h4>{title}</h4>
-        <p>${price}</p>
-      </div>
-      <div className={classes.sumQty}>
-      <p>x {''} {quantity}</p>
-      </div>
-      </div>
+      <li>
+        <div className={classes.sumWrapper}>
+          <div className={classes.sumImg}>
+            <Image src={cartImg} alt={title} />
+          </div>
+          <div className={classes.sumContent}>
+            <h4>{title}</h4>
+            <p>${price}</p>
+          </div>
+          <div className={classes.sumQty}>
+            <p>
+              x {""} {quantity}
+            </p>
+          </div>
+        </div>
       </li>
     </>
   );

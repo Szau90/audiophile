@@ -2,6 +2,7 @@ import ProductCard from "../../UI/ProductCard";
 import classes from "./ProductList.module.css";
 import ProductButton from "../UI/ProductButton";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 const ProductList: React.FC<{
   title: string;
@@ -33,7 +34,7 @@ const ProductList: React.FC<{
                   </div>
                 </div>
                 <div className={`${classes.image} ${classes.item}`}>
-                  <img className={classes.img} src={image} alt={title} />
+                  <Image className={classes.img} src={image} alt={title} />
                 </div>
               </div>
             </li>

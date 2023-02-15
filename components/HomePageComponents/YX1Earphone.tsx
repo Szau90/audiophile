@@ -2,6 +2,7 @@ import BlackBorderBtn from "../UI/BlackBorderBtn";
 import classes from "./YX1Earphone.module.css";
 
 
+
 const YX1Earphone = () => {
   return (
     <>

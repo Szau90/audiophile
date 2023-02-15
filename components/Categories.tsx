@@ -2,6 +2,7 @@ import classes from "./Categories.module.css";
 import ShopButton from "./UI/ShopButton";
 import { useRouter } from "next/router";
 import { useAppSelector } from "../Hooks/hooks";
+import Image from "next/image";
 
 const Categories = () => {
   const showNavBar = useAppSelector((state) => state.ui.navbarOpen);
@@ -21,35 +22,31 @@ const Categories = () => {
   return (
     <>
       <div
-        className={
-          showNavBar
-            ? classes.flexContainer 
-            : classes.flexContainer
-        }
+        className={showNavBar ? classes.flexContainer : classes.flexContainer}
       >
         <div className={classes.container}>
           <div className={classes.wrapper}>
             <div className={classes.headphones}>
-              <img
+              <Image
                 className={classes.image}
                 src="/images/image-category-thumbnail-headphones.png"
-                alt=""
+                alt="headphones"
               />
-             
+
               <h3 className={classes.catTitle}>Headphones</h3>
               <div className={classes.shopBtn}>
                 <ShopButton onClick={handleHeadPhonesClick} />
               </div>
-            
             </div>
           </div>
           <div className={classes.wrapper}>
             <div className={classes.speakers}>
-              <img
+              <Image
                 className={classes.image}
                 src="/images/image-category-thumbnail-speakers.png"
-                alt=""
+                alt="speakers"
               />
+
               <h3 className={classes.catTitle}>Speakers</h3>
               <div className={classes.shopBtn}>
                 <ShopButton onClick={handleSpeakersClick} />
@@ -58,10 +55,10 @@ const Categories = () => {
           </div>
           <div className={classes.wrapper}>
             <div className={classes.earphones}>
-              <img
+              <Image
                 className={classes.image}
                 src="/images/image-category-thumbnail-earphones.png"
-                alt=""
+                alt="earphones"
               />
 
               <h3 className={classes.catTitle}>Earphones</h3>
@@ -72,7 +69,6 @@ const Categories = () => {
           </div>
         </div>
       </div>
-     
     </>
   );
 };

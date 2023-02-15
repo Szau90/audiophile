@@ -6,6 +6,7 @@ import { cartActions } from "../../store/cart-slice";
 import { useRouter } from "next/router";
 import SummaryItems from "./SummaryItems";
 import { uiActions } from "../../store/ui-slice";
+import Image from "next/image";
 
 const ConfirmationModal: React.FC<{ grandTotal: number }> = (props) => {
   const cartItems = useAppSelector((state) => state.cart.items);
@@ -70,7 +71,8 @@ const ConfirmationModal: React.FC<{ grandTotal: number }> = (props) => {
               <div className={classes.item}>
                 <div className={classes.firstItem}>
                 <div>
-                  <img src={cartImg} alt={title} />
+                  <Image src={cartImg} alt={title} />
+                 
                 </div>
                 <div className={classes.firstItemContent}>
                   <h3>{title}</h3>

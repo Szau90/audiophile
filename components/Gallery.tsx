@@ -1,4 +1,5 @@
 import classes from "./Gallery.module.css";
+import Image from "next/image";
 
 const Gallery: React.FC<{
   gallery: {
@@ -13,17 +14,16 @@ const Gallery: React.FC<{
 
   return (
     <>
-    <div className={classes.wrapper}>
-      <div className={classes.gallery}>
-        <div className={classes.firstGalleryCol}>
-          <img src={firstImg} alt="" />
-
-          <img src={secondImg} alt="" />
+      <div className={classes.wrapper}>
+        <div className={classes.gallery}>
+          <div className={classes.firstGalleryCol}>
+            <Image src={firstImg} alt="" />
+            <Image src={secondImg} alt="" />
+          </div>
+          <div className={classes.secondGalleryCol}>
+            <Image src={thirdImg} alt="" />
+          </div>
         </div>
-        <div className={classes.secondGalleryCol}>
-          <img src={thirdImg} alt="" />
-        </div>
-      </div>
       </div>
     </>
   );
