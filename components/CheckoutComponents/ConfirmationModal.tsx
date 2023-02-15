@@ -71,7 +71,8 @@ const ConfirmationModal: React.FC<{ grandTotal: number }> = (props) => {
               <div className={classes.item}>
                 <div className={classes.firstItem}>
                 <div>
-                  <Image src={cartImg} alt={title} />
+                  <Image src={cartImg} alt={title}  width={100}
+                height={100} />
                  
                 </div>
                 <div className={classes.firstItemContent}>

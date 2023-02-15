@@ -66,7 +66,9 @@ const ProductItem: React.FC<{
       <div className={classes.mainWrapper}>
         <div className={classes.container}>
           <div className={classes.image}>
-            <Image src={image} alt={title} />
+            <Image src={image} alt={title}
+             width={540}
+             height={560} />
           </div>
           <div className={classes.content}>
             <h1>{title}</h1>

@@ -10,7 +10,7 @@ const CartItem: React.FC<{
   price: number;
   id: number;
   cartImg: string;
-  shortName: string
+  shortName: string;
 }> = (props) => {
   const { title, quantity, totalPrice, price, id, cartImg, shortName } = props;
 
@@ -39,20 +39,20 @@ const CartItem: React.FC<{
         totalPrice,
         quantity,
         cartImg,
-        shortName
+        shortName,
       })
     );
   };
   return (
     <li className={classes.item}>
+      <Image src={cartImg} alt={title}
+      width={100}
+      height={100}
+      />
 
-      <Image src={cartImg} alt={title} />
-    
-
-   
       <div>
-      <h3>{shortName}</h3>
-      <p>$ {price}</p>
+        <h3>{shortName}</h3>
+        <p>$ {price}</p>
       </div>
 
       <div className={classes.details}>

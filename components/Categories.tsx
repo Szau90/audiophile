@@ -31,6 +31,8 @@ const Categories = () => {
                 className={classes.image}
                 src="/images/image-category-thumbnail-headphones.png"
                 alt="headphones"
+                width={220}
+                height={200}
               />
 
               <h3 className={classes.catTitle}>Headphones</h3>
@@ -45,6 +47,8 @@ const Categories = () => {
                 className={classes.image}
                 src="/images/image-category-thumbnail-speakers.png"
                 alt="speakers"
+                width={220}
+                height={200}
               />
 
               <h3 className={classes.catTitle}>Speakers</h3>
@@ -59,6 +63,8 @@ const Categories = () => {
                 className={classes.image}
                 src="/images/image-category-thumbnail-earphones.png"
                 alt="earphones"
+                width={220}
+                height={200}
               />
 
               <h3 className={classes.catTitle}>Earphones</h3>

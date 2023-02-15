@@ -15,7 +15,10 @@ const Summary: React.FC<{
       <li>
         <div className={classes.sumWrapper}>
           <div className={classes.sumImg}>
-            <Image src={cartImg} alt={title} />
+            <Image src={cartImg} alt={title} 
+             width={220}
+             height={200}
+              />
           </div>
           <div className={classes.sumContent}>
             <h4>{title}</h4>

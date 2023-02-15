@@ -32,7 +32,9 @@ const Others: React.FC<{
         <h1 className={classes.title}>You may also like</h1>
         <div className={classes.container}>
           <div className={classes.item}>
-            <Image src={props.others[0].image} alt="" />
+            <Image src={props.others[0].image} alt="" 
+            width={100}
+            height={100} />
 
             <h1>{props.others[0].name}</h1>
             <div>
@@ -40,7 +42,9 @@ const Others: React.FC<{
             </div>
           </div>
           <div className={classes.item}>
-            <Image src={props.others[1].image} alt="" />
+            <Image src={props.others[1].image} alt=""
+            width={100}
+            height={100}  />
 
             <h1>{props.others[1].name}</h1>
             <div>
@@ -48,7 +52,9 @@ const Others: React.FC<{
             </div>
           </div>
           <div className={classes.item}>
-            <Image src={props.others[2].image} alt="" />
+            <Image src={props.others[2].image} alt="" 
+            width={100}
+            height={100}  />
 
             <h1>{props.others[2].name}</h1>
             <div>
