@@ -15,7 +15,7 @@ const ConfirmationModal: React.FC<{ grandTotal: number }> = (props) => {
   const qty = cartItems[0].quantity;
   const price = cartItems[0].price;
   const itemLeft = cartItems.length - 1;
-  const cart = cartItems[0].cart;
+  const cartImg = cartItems[0].cartImg;
 
   const moreItems = cartItems
     .filter((cartItems, index) => index > 0)
@@ -23,7 +23,7 @@ const ConfirmationModal: React.FC<{ grandTotal: number }> = (props) => {
       <SummaryItems
         key={i.id}
         title={i.shortName}
-        cart={i.cart}
+        cartImg={i.cartImg}
         price={i.price}
         qty={i.quantity}
       />
@@ -70,7 +70,7 @@ const ConfirmationModal: React.FC<{ grandTotal: number }> = (props) => {
               <div className={classes.item}>
                 <div className={classes.firstItem}>
                 <div>
-                  <img src={cart} alt={title} />
+                  <img src={cartImg} alt={title} />
                 </div>
                 <div className={classes.firstItemContent}>
                   <h3>{title}</h3>

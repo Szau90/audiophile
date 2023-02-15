@@ -1,12 +1,12 @@
 import classes from "./SummaryItems.module.css"
 
-const SummaryItems:React.FC<{title:string; cart:string; price:number; qty:number;}> = (props) => {
-    const {title, cart, price, qty} = props
+const SummaryItems:React.FC<{title:string; cartImg:string; price:number; qty:number;}> = (props) => {
+    const {title, cartImg, price, qty} = props
     return (
         <>
          <div className={classes.item}>
                 <div>
-                  <img src={cart} alt={title} />
+                  <img src={cartImg} alt={title} />
                 </div>
                 <div className={classes.content}>
                   <h3>{title}</h3>
