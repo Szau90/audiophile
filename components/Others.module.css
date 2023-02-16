@@ -44,9 +44,9 @@
   letter-spacing: 1.3px;
   margin-top: 2rem;
 }
-.item div {
-  width: 50%;
-  margin-top: 2rem;
+.action {
+  margin-top: 1rem;
+  width: 160px;
 }
 .mobile {
   display: none;
@@ -79,6 +79,10 @@
   }
   .desktop {
     display: none;
+  }
+  .action {
+    display: flex;
+    width: 200px;
   }
 }
 

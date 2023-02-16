@@ -43,7 +43,7 @@ const Others: React.FC<{
             height={200}  />
 
             <h1>{props.others[0].name}</h1>
-            <div>
+            <div className={classes.action}>
               <ProductButton name={"see product"} action={firstAction} />
             </div>
           </div>
@@ -59,7 +59,7 @@ const Others: React.FC<{
             height={320}  />
 
             <h1>{props.others[1].name}</h1>
-            <div>
+            <div  className={classes.action}>
               <ProductButton name={"see product"} action={secondAction} />
             </div>
           </div>
@@ -75,7 +75,7 @@ const Others: React.FC<{
             height={200}  />
 
             <h1>{props.others[2].name}</h1>
-            <div>
+            <div  className={classes.action}>
               <ProductButton name={"see product"} action={thirdAction} />
             </div>
           </div>
