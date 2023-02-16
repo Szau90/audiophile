@@ -28,7 +28,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 168px;
+  margin-top: 2rem;
 }
 
 @media (max-width: 768px) {
@@ -45,9 +45,7 @@
         line-height: 36px;
         letter-spacing: 1.25px;
     }
-    .box {
-      margin-top: 6rem;
-    }
+   
   
 }
 @media (max-width:375px) {

@@ -1,7 +1,7 @@
 .wrapper {
   display: flex;
   justify-content: center;
-  margin-top: 168px;
+  margin-top: 2rem;
 }
 .box {
   display: grid;
@@ -38,7 +38,6 @@
 
 @media (max-width: 768px) {
   .wrapper {
-    margin-top: 6rem;
     margin-bottom: 5rem;
   }
   .box {
