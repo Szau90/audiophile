@@ -60,10 +60,11 @@ const ProductItem: React.FC<{
   }, [cart, dispatch]);
   return (
     <div className={classes.box}>
+    
+      <div className={classes.mainWrapper}>
       <div className={classes.link}>
         <Link href={`/${category}`}>Go Back</Link>
       </div>
-      <div className={classes.mainWrapper}>
         <div className={classes.container}>
           <div className={classes.image}>
             <Image src={image} alt={title}

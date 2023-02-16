@@ -42,18 +42,24 @@ interface Products {
       name: string;
       slug: string;
       category: string;
+      mobileImg: string;
+      tabletImg: string;
     };
     1: {
       image: string;
       name: string;
       slug: string;
       category: string;
+      mobileImg: string;
+      tabletImg: string;
     };
     2: {
       image: string;
       name: string;
       slug: string;
       category: string;
+      mobileImg: string;
+      tabletImg: string;
     };
   };
   slug: string;

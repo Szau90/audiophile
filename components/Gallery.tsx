@@ -17,16 +17,16 @@ const Gallery: React.FC<{
       <div className={classes.wrapper}>
         <div className={classes.gallery}>
           <div className={classes.firstGalleryCol}>
-            <Image src={firstImg} alt="" width={200}
-             height={200} />
+            <Image src={firstImg} alt="" width={450}
+             height={280} />
             <Image src={secondImg} alt="" 
-            width={200}
-            height={200} />
+            width={450}
+            height={280} />
           </div>
           <div className={classes.secondGalleryCol}>
             <Image src={thirdImg} alt="" 
-            width={200}
-            height={200} />
+            width={625}
+            height={592} />
           </div>
         </div>
       </div>

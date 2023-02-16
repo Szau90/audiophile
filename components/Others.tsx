@@ -5,9 +5,9 @@ import Image from "next/image";
 
 const Others: React.FC<{
   others: {
-    0: { image: string; name: string; slug: string; category: string };
-    1: { image: string; name: string; slug: string; category: string };
-    2: { image: string; name: string; slug: string; category: string };
+    0: { image: string; name: string; slug: string; category: string; mobileImg:string; tabletImg: string;};
+    1: { image: string; name: string; slug: string; category: string; mobileImg: string; tabletImg: string; };
+    2: { image: string; name: string; slug: string; category: string; mobileImg: string; tabletImg: string; };
   };
 }> = (props) => {
   const firstProductLink = `/${props.others[0].category}/${props.others[0].slug}`;
@@ -32,9 +32,15 @@ const Others: React.FC<{
         <h1 className={classes.title}>You may also like</h1>
         <div className={classes.container}>
           <div className={classes.item}>
-            <Image src={props.others[0].image} alt="" 
-            width={100}
-            height={100} />
+            <Image className={classes.desktop} src={props.others[0].image} alt="" 
+            width={350}
+            height={325} />
+            <Image className={classes.mobile} src={props.others[0].mobileImg} alt=""
+            width={327}
+            height={120}  />
+             <Image className={classes.tablet} src={props.others[0].tabletImg} alt=""
+            width={200}
+            height={200}  />
 
             <h1>{props.others[0].name}</h1>
             <div>
@@ -42,9 +48,15 @@ const Others: React.FC<{
             </div>
           </div>
           <div className={classes.item}>
-            <Image src={props.others[1].image} alt=""
-            width={100}
-            height={100}  />
+            <Image className={classes.desktop} src={props.others[1].image} alt=""
+            width={350}
+            height={325}  />
+             <Image className={classes.mobile} src={props.others[1].mobileImg} alt=""
+            width={327}
+            height={120}  />
+             <Image className={classes.tablet} src={props.others[1].tabletImg} alt=""
+            width={210}
+            height={320}  />
 
             <h1>{props.others[1].name}</h1>
             <div>
@@ -52,9 +64,15 @@ const Others: React.FC<{
             </div>
           </div>
           <div className={classes.item}>
-            <Image src={props.others[2].image} alt="" 
-            width={100}
-            height={100}  />
+            <Image className={classes.desktop} src={props.others[2].image} alt="" 
+            width={350}
+            height={325}  />
+            <Image className={classes.mobile} src={props.others[2].mobileImg} alt=""
+            width={327}
+            height={120}  />
+             <Image className={classes.tablet} src={props.others[2].tabletImg} alt=""
+            width={200}
+            height={200}  />
 
             <h1>{props.others[2].name}</h1>
             <div>

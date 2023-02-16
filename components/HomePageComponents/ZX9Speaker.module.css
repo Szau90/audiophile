@@ -44,11 +44,17 @@
 }
 .circles {
   position: absolute;
-  z-index: 1;
+  z-index: 100;
   display: flex;
   top: 0.1%;
   right: 30%;
 
+}
+.tablet {
+  display: none;
+}
+.mobile {
+  display: none;
 }
 
 @media (max-width: 768px) {
@@ -62,21 +68,20 @@
     flex-flow: column nowrap;
   }
   .speakerImage {
-    left: 36%;
+    left: 35%;
     top: 10%;
     height: 210px;
     width: 200px;
   }
-  .speakerImg {
-    height: 200px;
-  }
+ 
   .speakerContent {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    left: 36%;
+    left: 30%;
     bottom: 15%;
     width: 250px;
+    text-align: center;
   }
   .speakerContent h1 {
     font-size: 40px;
@@ -88,8 +93,22 @@
     line-height: 22px;
   }
   .circles {
-    right: -17%;
+   
+    right: -19%;
     top: -42%;
+  }
+  .tablet {
+    display: flex;
+  }
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: none;
+  }
+  .action {
+    display: flex;
+    justify-content: center;
   }
 }
 @media (max-width: 375px) {
@@ -118,7 +137,25 @@
   justify-content: center;
 }
 .circles {
-  left: -90%;
-  top: -42%;
+
+ height: 100%;
+ width: 100%;
+  
+}
+.circles svg {
+  position: relative;
+  overflow:visible;
+  right: 110%;
+  width: 50%;
+  height: 50%;
+}
+.desktop {
+  display: none;
+}
+.tablet {
+  display: none;
+}
+.mobile {
+  display: flex;
 }
 }

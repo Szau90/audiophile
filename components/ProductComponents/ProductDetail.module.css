@@ -1,12 +1,17 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 .box {
-  width: 1440px;
+  width: 1110px;
   display: flex;
   justify-content: center;
   margin-top: 165px;
 }
 .features {
-  width: 560px;
-  margin-right: 167px;
+  width: 620px;
+  margin-right: 100px;
 }
 .features h1 {
   text-transform: uppercase;

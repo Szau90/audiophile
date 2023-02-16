@@ -28,9 +28,9 @@ const ProductDetail: React.FC<{
     4: { item: string; quantity: number };
   };
   others: {
-    0: { image: string; name: string; slug: string; category: string };
-    1: { image: string; name: string; slug: string; category: string };
-    2: { image: string; name: string; slug: string; category: string };
+    0: { image: string; name: string; slug: string; category: string; mobileImg: string; tabletImg: string; };
+    1: { image: string; name: string; slug: string; category: string; mobileImg: string; tabletImg: string; };
+    2: { image: string; name: string; slug: string; category: string; mobileImg: string; tabletImg: string; };
   };
   shortName: string;
 }> = (props) => {

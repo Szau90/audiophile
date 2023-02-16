@@ -9,11 +9,28 @@ const ZX9Speaker = () => {
         <div className={classes.box}>
           <div className={classes.speakerImage}>
             <Image
+              
               src={"/images/image-speaker-zx9.png"}
               alt={"ZX9 speaker"}
-              className={classes.speakerImg}
+              className={classes.speakerImg && classes.desktop}
               width={360}
               height={400}
+            />
+              <Image
+              
+              src={"/images/image-speaker-zx9-tablet.png"}
+              alt={"ZX9 speaker"}
+              className={classes.speakerImg && classes.tablet}
+              width={190}
+              height={210}
+            />
+                 <Image
+              
+              src={"/images/image-speaker-zx9-mobile.png"}
+              alt={"ZX9 speaker"}
+              className={classes.speakerImg && classes.mobile}
+              width={150}
+              height={180}
             />
           </div>
           <div className={classes.circles}>
@@ -36,7 +53,7 @@ const ZX9Speaker = () => {
               Upgrade to premium speakers that are phenomenally built to deliver
               truly remarkable sound.
             </p>
-            <div>
+            <div className={classes.action}>
               <BlackProductButton link="/speakers/zx9-speaker" />
             </div>
           </div>

@@ -82,6 +82,7 @@
     height: 217px;
     width: 689px;
     margin-top: 100px;
+  
   }
   .headphones {
     width: 13rem;
@@ -122,9 +123,10 @@
     align-items: center;
     justify-content: center;
     margin-top: 1rem;
-    margin-bottom: 0;
+    margin-bottom: 3rem;
     height: fit-content;
     width: 327px;
+
   }
   .headphones {
     width: 327px;
