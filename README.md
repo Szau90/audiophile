@@ -39,8 +39,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: (https://github.com/Szau90/audiophile)
-- Live Site URL: (https://audiophile-szau90.vercel.app/)
+- Solution URL: [github](https://github.com/Szau90/audiophile)
+- Live Site URL: [audiophile](https://audiophile-szau90.vercel.app/)
 
 
 ### Built with
@@ -57,5 +57,5 @@ Users should be able to:
 
 ## Author
 
-- Github - (https://github.com/Szau90)
+- Github - [Szau90](https://github.com/Szau90)
 - Frontend Mentor - [@Szau90](https://www.frontendmentor.io/profile/Szau90)
