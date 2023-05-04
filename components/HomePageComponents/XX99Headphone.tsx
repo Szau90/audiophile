@@ -7,7 +7,6 @@ const XX99Headphone = () => {
   const action = () => {
     router.push("/headphones/xx99-mark-two-headphones");
   };
- 
 
   return (
     <>

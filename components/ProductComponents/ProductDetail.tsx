@@ -5,6 +5,7 @@ import BoxIncludes from "../BoxIncludes";
 import Gallery from "../Gallery";
 import Others from "../Others";
 import ProductItem from "./ProductItem";
+import { Includes, OthersList } from "../../models/Products";
 
 const ProductDetail: React.FC<{
   cartImg: string;
@@ -20,18 +21,8 @@ const ProductDetail: React.FC<{
     second: string;
     third: string;
   };
-  includes: {
-    0: { item: string; quantity: number };
-    1: { item: string; quantity: number };
-    2: { item: string; quantity: number };
-    3: { item: string; quantity: number };
-    4: { item: string; quantity: number };
-  };
-  others: {
-    0: { image: string; name: string; slug: string; category: string; mobileImg: string; tabletImg: string; };
-    1: { image: string; name: string; slug: string; category: string; mobileImg: string; tabletImg: string; };
-    2: { image: string; name: string; slug: string; category: string; mobileImg: string; tabletImg: string; };
-  };
+  includes: Includes[];
+  others: OthersList[];
   shortName: string;
 }> = (props) => {
   const {

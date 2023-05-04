@@ -9,23 +9,20 @@ const ZX9Speaker = () => {
         <div className={classes.box}>
           <div className={classes.speakerImage}>
             <Image
-              
               src={"/images/image-speaker-zx9.png"}
               alt={"ZX9 speaker"}
               className={classes.speakerImg && classes.desktop}
               width={360}
               height={400}
             />
-              <Image
-              
+            <Image
               src={"/images/image-speaker-zx9-tablet.png"}
               alt={"ZX9 speaker"}
               className={classes.speakerImg && classes.tablet}
               width={190}
               height={210}
             />
-                 <Image
-              
+            <Image
               src={"/images/image-speaker-zx9-mobile.png"}
               alt={"ZX9 speaker"}
               className={classes.speakerImg && classes.mobile}

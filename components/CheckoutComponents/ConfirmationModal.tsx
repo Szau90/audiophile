@@ -8,7 +8,9 @@ import SummaryItems from "./SummaryItems";
 import { uiActions } from "../../store/ui-slice";
 import Image from "next/image";
 
-const ConfirmationModal: React.FC<{ grandTotal: number }> = (props) => {
+const ConfirmationModal: React.FC<{ grandTotal: number }> = ({
+  grandTotal,
+}) => {
   const cartItems = useAppSelector((state) => state.cart.items);
   const showItems = useAppSelector((state) => state.ui.showItems);
 
@@ -66,44 +68,50 @@ const ConfirmationModal: React.FC<{ grandTotal: number }> = (props) => {
             <p>You will recive an e-mail confirmation shortly.</p>
           </div>
           <div className={classes.wrapper}>
-          <div className={classes.container}>
-            <div className={classes.firstCol}>
-              <div className={classes.item}>
-                <div className={classes.firstItem}>
-                <div>
-                  <Image src={cartImg} alt={title}  width={100}
-                height={100} />
-                 
+            <div className={classes.container}>
+              <div className={classes.firstCol}>
+                <div className={classes.item}>
+                  <div className={classes.firstItem}>
+                    <div>
+                      <Image
+                        src={cartImg}
+                        alt={title}
+                        width={100}
+                        height={100}
+                      />
+                    </div>
+                    <div className={classes.firstItemContent}>
+                      <h3>{title}</h3>
+                      <p>${price}</p>
+                    </div>
+                    <div>
+                      <p>x{qty}</p>
+                    </div>
+                  </div>
+
+                  {showItems && moreItems}
                 </div>
-                <div className={classes.firstItemContent}>
-                  <h3>{title}</h3>
-                  <p>${price}</p>
+                <div className={classes.showMore}>
+                  <button
+                    className={classes.itemLeft}
+                    onClick={moreItemHandler}
+                  >
+                    {!showItems && <p> and {itemLeft} other item(s) left</p>}
+                    {showItems && <p>View less</p>}
+                  </button>
                 </div>
-                <div>
-                  <p>x{qty}</p>
-                </div>
-                </div>
-              
-              {showItems && moreItems}
               </div>
-              <div className={classes.showMore}>
-                <button className={classes.itemLeft} onClick={moreItemHandler}>
-                  {!showItems && <p> and {itemLeft} other item(s) left</p>}
-                  {showItems && <p>View less</p>}
-                </button>
+              <div className={classes.secondCol}>
+                <div>
+                  <h3>Grand Total</h3>
+                  <p>$ {grandTotal.toFixed(0)}</p>
+                </div>
               </div>
             </div>
-            <div className={classes.secondCol}>
-              <div>
-              <h3>Grand Total</h3>
-              <p>$ {props.grandTotal.toFixed(0)}</p>
-              </div>
-            </div>
-          </div>
           </div>
           <div className={classes.homeBtn}>
             <div>
-            <ProductButton name={"Back to home"} action={action} />
+              <ProductButton name={"Back to home"} action={action} />
             </div>
           </div>
         </Card>

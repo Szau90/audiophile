@@ -34,9 +34,13 @@ const ProductList: React.FC<{
                   </div>
                 </div>
                 <div className={`${classes.image} ${classes.item}`}>
-                  <Image className={classes.img} src={image} alt={title}
-                  width={555}
-                  height={560}  />
+                  <Image
+                    className={classes.img}
+                    src={image}
+                    alt={title}
+                    width={555}
+                    height={560}
+                  />
                 </div>
               </div>
             </li>

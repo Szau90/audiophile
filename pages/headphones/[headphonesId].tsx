@@ -6,69 +6,67 @@ import Cart from "../../components/Cart/Cart";
 import { useRouter } from "next/router";
 import { useAppSelector } from "../../Hooks/hooks";
 
-const HeadphonesDetailPage = ({ products }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const HeadphonesDetailPage = ({
+  products,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   const router = useRouter();
   const showCart = useAppSelector((state) => state.ui.cartIsVisible);
 
-
   const headphonesId = router.query.headphonesId;
-  let key: number 
-  switch (headphonesId) {
-    
-    case "xx59-headphones":
-      key = 1;
-      break;
-    case "xx99-mark-one-headphones":
-      key = 2;
-      break;
-    case "xx99-mark-two-headphones":
-      key = 3;
-      break;
-    
-  }
+
+  const headphoneDetail = products
+    .filter((f) => f.slug === headphonesId)
+    .map((item, index) => (
+      <ProductDetail
+        key={index}
+        id={item.id}
+        title={item.name}
+        description={item.description}
+        price={item.price}
+        image={item.image}
+        category={item.category}
+        features={item.features}
+        gallery={item.gallery}
+        includes={item.includes}
+        others={item.others}
+        cartImg={item.cartImg}
+        shortName={item.shortName}
+      />
+    ));
 
   return (
     <>
-     <Head>
+      <Head>
         <title>Frontend Mentor | Audiophile e-commerce website</title>
         <meta name="description" content="Check our amaizing headphones"></meta>
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0"
         ></meta>
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link>
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        ></link>
       </Head>
-    {showCart && <Cart />}
-    <ProductDetail
-      id={products[key!].id}
-      title={products[key!].name}
-      description={products[key!].description}
-      price={products[key!].price}
-      image={products[key!].image}
-      category={products[key!].category}
-      features={products[key!].features}
-      gallery={products[key!].gallery}
-      includes={products[key!].includes}
-      others={products[key!].others}
-      cartImg={products[key!].cartImg}
-      shortName={products[key!].shortName}
-    />
+      {showCart && <Cart />}
+      {headphoneDetail}
     </>
- 
-
   );
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  return {
-    paths: [
-     
-      { params: { headphonesId: "xx59-headphones" } },
-      { params: { headphonesId: "xx99-mark-one-headphones" } },
-      { params: { headphonesId: "xx99-mark-two-headphones" } },
-    ],
-    fallback: false,
-  };
+  const res = await fetch(
+    "https://audiophile-af1e7-default-rtdb.europe-west1.firebasedatabase.app/ProdList.json"
+  );
+  const result: Products[] = await res.json();
+
+  const paths = result.map((item) => ({
+    params: { headphonesId: item.slug },
+  }));
+
+  return { paths, fallback: "blocking" };
 };
 
 export const getStaticProps: GetStaticProps<{

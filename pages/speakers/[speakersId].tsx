@@ -13,54 +13,60 @@ const SpeakersDetailPage = ({
   const showCart = useAppSelector((state) => state.ui.cartIsVisible);
 
   const speakersId = router.query.speakersId;
-  let key: number;
-  switch (speakersId) {
-    case "zx7-speaker":
-      key = 4;
-      break;
-    case "zx9-speaker":
-      key = 5;
-      break;
-  }
+
+  const speakerDetail = products
+    .filter((f) => f.slug === speakersId)
+    .map((item, index) => (
+      <ProductDetail
+        key={index}
+        id={item.id}
+        title={item.name}
+        description={item.description}
+        price={item.price}
+        image={item.image}
+        category={item.category}
+        features={item.features}
+        gallery={item.gallery}
+        includes={item.includes}
+        others={item.others}
+        cartImg={item.cartImg}
+        shortName={item.shortName}
+      />
+    ));
 
   return (
     <>
-     <Head>
+      <Head>
         <title>Frontend Mentor | Audiophile e-commerce website</title>
         <meta name="description" content="Check our amaizing speakers"></meta>
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0"
         ></meta>
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link>
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        ></link>
       </Head>
       {showCart && <Cart />}
-      <ProductDetail
-        id={products[key!].id}
-        title={products[key!].name}
-        description={products[key!].description}
-        price={products[key!].price}
-        image={products[key!].image}
-        category={products[key!].category}
-        features={products[key!].features}
-        gallery={products[key!].gallery}
-        includes={products[key!].includes}
-        others={products[key!].others}
-        cartImg={products[key!].cartImg}
-        shortName={products[key!].shortName}
-      />
+      {speakerDetail}
     </>
   );
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  return {
-    paths: [
-      { params: { speakersId: "zx7-speaker" } },
-      { params: { speakersId: "zx9-speaker" } },
-    ],
-    fallback: false,
-  };
+  const res = await fetch(
+    "https://audiophile-af1e7-default-rtdb.europe-west1.firebasedatabase.app/ProdList.json"
+  );
+  const result: Products[] = await res.json();
+
+  const paths = result.map((item) => ({
+    params: { speakersId: item.slug },
+  }));
+
+  return { paths, fallback: "blocking" };
 };
 
 export const getStaticProps: GetStaticProps<{

@@ -10,16 +10,16 @@ const EmptyCart = () => {
   };
   return (
     <>
-    <div className={classes.wrapper}>
-      <h1 className={classes.title}>
-        Your Cart is empty please add some items!
-      </h1>
-      <Categories />
-      <div className={classes.btn}>
-        <div>
-          <ProductButton name={"back to home"} action={action} />
+      <div className={classes.wrapper}>
+        <h1 className={classes.title}>
+          Your Cart is empty please add some items!
+        </h1>
+        <Categories />
+        <div className={classes.btn}>
+          <div>
+            <ProductButton name={"back to home"} action={action} />
+          </div>
         </div>
-      </div>
       </div>
     </>
   );

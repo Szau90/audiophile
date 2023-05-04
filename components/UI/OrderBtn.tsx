@@ -2,10 +2,10 @@ import classes from "./ProductButton.module.css";
 
 const OrderBtn: React.FC<{
   name: string;
-}> = (props) => {
+}> = ({name}) => {
   return (
     <button form="OrderForm" type="submit" className={classes.button}>
-      {props.name}
+      {name}
     </button>
   );
 };

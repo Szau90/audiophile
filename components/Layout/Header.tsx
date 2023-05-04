@@ -6,7 +6,6 @@ import { uiActions } from "../../store/ui-slice";
 import Menu from "./Menu";
 import { useRouter } from "next/router";
 
-
 const Header = () => {
   const dispatch = useAppDispatch();
 
@@ -15,8 +14,8 @@ const Header = () => {
   };
   const router = useRouter();
   const homeClickhandler = () => {
-    router.push('/')
-  }
+    router.push("/");
+  };
   const showNavbar = useAppSelector((state) => state.ui.navbarOpen);
 
   return (

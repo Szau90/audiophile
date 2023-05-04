@@ -5,9 +5,9 @@ import classes from "./CheckoutForm.module.css";
 import { uiActions } from "../../store/ui-slice";
 import Orders from "../../models/Orders";
 
-const CheckoutForm: React.FC<{ onOrder: (orderData: Orders) => void }> = (
-  props
-) => {
+const CheckoutForm: React.FC<{ onOrder: (orderData: Orders) => void }> = ({
+  onOrder,
+}) => {
   const nameInputRef = React.useRef<HTMLInputElement>(null);
   const emailInputRef = React.useRef<HTMLInputElement>(null);
   const phoneInputRef = React.useRef<HTMLInputElement>(null);
@@ -36,8 +36,8 @@ const CheckoutForm: React.FC<{ onOrder: (orderData: Orders) => void }> = (
       emoneyNumber: eMoneyNumberInputRef.current!.value,
       emoneyPin: eMoneyPinInputRef.current!.value,
     };
-    props.onOrder(orderData);
-    document.body.scrollTop = 0; 
+    onOrder(orderData);
+    document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   };
 

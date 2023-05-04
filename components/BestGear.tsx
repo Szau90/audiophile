@@ -6,9 +6,11 @@ const BestGear = () => {
       <div className={classes.wrapper}>
         <div className={classes.box}>
           <div className={classes.content}>
-            <h1> Bringing you the <span>best</span> audio gear </h1>
+            <h1>
+              {" "}
+              Bringing you the <span>best</span> audio gear{" "}
+            </h1>
             <p>
-            
               Located at the heart of New York City, Audiophile is the premier
               store for high end headphones, earphones, speakers, and audio
               accessories. We have a large showroom and luxury demonstration
@@ -18,7 +20,7 @@ const BestGear = () => {
               audio equipment.
             </p>
           </div>
-          <div className={classes.img}/>
+          <div className={classes.img} />
         </div>
       </div>
     </>

@@ -13,39 +13,45 @@ const EarPhonesDetailPage = ({
   const showCart = useAppSelector((state) => state.ui.cartIsVisible);
 
   const earphonesId = router.query.earphonesId;
-  let key: number;
-  switch (earphonesId) {
-    case "yx1-earphones":
-      key = 0;
-      break;
-  }
+
+  const earphoneDetail = products
+    .filter((f) => f.slug === earphonesId)
+    .map((item, index) => (
+      <ProductDetail
+        key={index}
+        id={item.id}
+        title={item.name}
+        description={item.description}
+        price={item.price}
+        image={item.image}
+        category={item.category}
+        features={item.features}
+        gallery={item.gallery}
+        includes={item.includes}
+        others={item.others}
+        cartImg={item.cartImg}
+        shortName={item.shortName}
+      />
+    ));
 
   return (
     <>
-    <Head>
+      <Head>
         <title>Frontend Mentor | Audiophile e-commerce website</title>
         <meta name="description" content="Check our amaizing earphones"></meta>
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0"
         ></meta>
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link>
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        ></link>
       </Head>
       {showCart && <Cart />}
-      <ProductDetail
-        id={products[key!].id}
-        title={products[key!].name}
-        description={products[key!].description}
-        price={products[key!].price}
-        image={products[key!].image}
-        category={products[key!].category}
-        features={products[key!].features}
-        gallery={products[key!].gallery}
-        includes={products[key!].includes}
-        others={products[key!].others}
-        cartImg={products[key!].cartImg}
-        shortName={products[key!].shortName}
-      />
+      {earphoneDetail}
     </>
   );
 };

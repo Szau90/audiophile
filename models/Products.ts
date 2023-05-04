@@ -13,60 +13,23 @@ interface Products {
     second: string;
     third: string;
   };
-  includes: {
-    0: {
-      item: string;
-      quantity: number;
-    };
-    1: {
-      item: string;
-      quantity: number;
-    };
-    2: {
-      item: string;
-      quantity: number;
-    };
-    3: {
-      item: string;
-      quantity: number;
-    };
-    4: {
-      item: string;
-      quantity: number;
-    };
-  };
+  includes: Includes[];
   new: boolean;
-  others: {
-    0: {
-      image: string;
-      name: string;
-      slug: string;
-      category: string;
-      mobileImg: string;
-      tabletImg: string;
-    };
-    1: {
-      image: string;
-      name: string;
-      slug: string;
-      category: string;
-      mobileImg: string;
-      tabletImg: string;
-    };
-    2: {
-      image: string;
-      name: string;
-      slug: string;
-      category: string;
-      mobileImg: string;
-      tabletImg: string;
-    };
-  };
+  others: OthersList[];
   slug: string;
   shortName: string;
- 
 }
-
-
+export interface OthersList {
+  image: string;
+  name: string;
+  slug: string;
+  category: string;
+  mobileImg: string;
+  tabletImg: string;
+}
+export interface Includes {
+  item: string;
+  quantity: number;
+}
 
 export default Products;

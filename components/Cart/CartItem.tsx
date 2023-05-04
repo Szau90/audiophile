@@ -45,10 +45,7 @@ const CartItem: React.FC<{
   };
   return (
     <li className={classes.item}>
-      <Image src={cartImg} alt={title}
-      width={100}
-      height={100}
-      />
+      <Image src={cartImg} alt={title} width={100} height={100} />
 
       <div>
         <h3>{shortName}</h3>

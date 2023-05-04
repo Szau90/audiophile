@@ -23,8 +23,8 @@ export const uiSlice = createSlice({
       state.cashOnDelivery = !state.cashOnDelivery;
     },
     toogleNavbar(state) {
-        state.navbarOpen = !state.navbarOpen
-    }
+      state.navbarOpen = !state.navbarOpen;
+    },
   },
 });
 

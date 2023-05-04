@@ -8,8 +8,9 @@ import { useAppSelector } from "../../Hooks/hooks";
 import Cart from "../../components/Cart/Cart";
 import ProductList from "../../components/ProductComponents/ProductList";
 
-const Speakers= ({ products }: InferGetStaticPropsType<typeof getStaticProps>) => {
-
+const Speakers = ({
+  products,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   const showCart = useAppSelector((state) => state.ui.cartIsVisible);
 
   const speakers = products
@@ -31,14 +32,19 @@ const Speakers= ({ products }: InferGetStaticPropsType<typeof getStaticProps>) =
     .map((c) => <CategoryHeader key={c.id} category={c.category} />);
   return (
     <>
-    <Head>
+      <Head>
         <title>Frontend Mentor | Audiophile e-commerce website</title>
         <meta name="description" content="Check our amaizing speakers"></meta>
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0"
         ></meta>
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link>
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        ></link>
       </Head>
       {showCart && <Cart />}
       {category}
@@ -49,7 +55,9 @@ const Speakers= ({ products }: InferGetStaticPropsType<typeof getStaticProps>) =
   );
 };
 
-export const getStaticProps: GetStaticProps<{ products: Products[] }> = async () => {
+export const getStaticProps: GetStaticProps<{
+  products: Products[];
+}> = async () => {
   const res = await fetch(
     "https://audiophile-af1e7-default-rtdb.europe-west1.firebasedatabase.app/ProdList.json"
   );
