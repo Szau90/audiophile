@@ -111,7 +111,7 @@
     justify-content: center;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 512px) {
   .box {
     width: 327px;
     height: 600px;

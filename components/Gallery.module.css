@@ -62,7 +62,7 @@
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 512px) {
     .gallery {
         width: 327px;
         height: 756px;

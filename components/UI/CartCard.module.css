@@ -15,7 +15,7 @@
         height: 488px;
     }
 }
-@media (max-width:375px) {
+@media (max-width:512px) {
     .cartCard {
         width: 327px;
         height: 488px;

@@ -86,7 +86,7 @@
   }
 }
 
-@media (max-width:375px) {
+@media (max-width:512px) {
   .container {
     width: 327px;
     display: flex;

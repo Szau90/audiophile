@@ -25,7 +25,7 @@
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 512px) {
     .button {
         height: 40px;
         font-size: 11px;

@@ -3,8 +3,9 @@
     height: 5rem;
     display: flex;
     align-items: center;
+    justify-content: center;
     background-color: #101010;
-    padding: 0 5%;
+    padding: 0 ;
   }
 
   .container {
@@ -117,7 +118,7 @@
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 512px) {
 .logo {
   margin:0;
   padding-left: 4rem;

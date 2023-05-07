@@ -48,7 +48,7 @@
    
   
 }
-@media (max-width:375px) {
+@media (max-width:512px) {
   .wrapper {
     width: 327px;
     height: 320px;

@@ -31,6 +31,7 @@ const EarPhonesDetailPage = ({
         others={item.others}
         cartImg={item.cartImg}
         shortName={item.shortName}
+        categoryImages={item.categoryImage}
       />
     ));
 

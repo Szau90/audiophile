@@ -61,7 +61,7 @@
     letter-spacing: 1.25px;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 512px) {
   .box {
     display: flex;
     width: 327px;

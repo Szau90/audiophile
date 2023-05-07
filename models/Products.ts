@@ -2,11 +2,11 @@ interface Products {
   cartImg: string;
   id: number;
   name: string;
-  image: string;
+  image: Images;
   price: number;
   category: string;
   description: string;
-  categoryImage: string;
+  categoryImage: Images;
   features: string;
   gallery: {
     first: string;
@@ -30,6 +30,11 @@ export interface OthersList {
 export interface Includes {
   item: string;
   quantity: number;
+}
+export interface Images {
+  desktop:string;
+  tablet:string;
+  mobile:string;
 }
 
 export default Products;

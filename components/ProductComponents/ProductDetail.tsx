@@ -5,7 +5,7 @@ import BoxIncludes from "../BoxIncludes";
 import Gallery from "../Gallery";
 import Others from "../Others";
 import ProductItem from "./ProductItem";
-import { Includes, OthersList } from "../../models/Products";
+import { Images, Includes, OthersList } from "../../models/Products";
 
 const ProductDetail: React.FC<{
   cartImg: string;
@@ -13,7 +13,7 @@ const ProductDetail: React.FC<{
   title: string;
   description: string;
   price: number;
-  image: string;
+  image: Images;
   category: string;
   features: string;
   gallery: {
@@ -24,6 +24,7 @@ const ProductDetail: React.FC<{
   includes: Includes[];
   others: OthersList[];
   shortName: string;
+  categoryImages:Images;
 }> = (props) => {
   const {
     id,
@@ -38,6 +39,7 @@ const ProductDetail: React.FC<{
     gallery,
     others,
     includes,
+    categoryImages,
   } = props;
   return (
     <>
@@ -50,6 +52,7 @@ const ProductDetail: React.FC<{
         cartImg={cartImg}
         shortName={shortName}
         category={category}
+        categoryImages={categoryImages}
       />
       <div className={classes.wrapper}>
         <div className={classes.box}>

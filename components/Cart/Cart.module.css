@@ -78,7 +78,7 @@
 
 }
 
-@media (max-width:375px) {
+@media (max-width:512px) {
   .cart {
     width: 100%;
     top: 10%;

@@ -42,7 +42,7 @@
   }
 }
 
-@media (max-width:375px) {
+@media (max-width:512px) {
   .sumWrapper {
     width: 327px;
     justify-content: center;

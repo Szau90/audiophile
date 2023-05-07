@@ -168,10 +168,11 @@
   }
 }
 
-@media (max-width:375px) {
+@media (max-width:512px) {
   .footer {
     display: flex;
     margin-top: 3rem;
+    justify-content: center;
   }
   .footerContainer {
     width: 375px;

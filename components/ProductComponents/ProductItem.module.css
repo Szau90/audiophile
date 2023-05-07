@@ -111,6 +111,15 @@
 .link:hover {
   color: #d87d46;
 }
+.tablet {
+  display: none;
+}
+.mobile {
+  display: none;
+}
+.desktop {
+  margin-right: 30px;
+}
 
 @media (max-width: 768px) {
   .box {
@@ -175,9 +184,16 @@
     font-size: 14px;
     margin-top: 3rem;
   }
+  .desktop {
+    display: none;
+  }
+  .tablet {
+    display: block;
+    margin-right: 30px;
+  }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 512px) {
   .mainWrapper {
  
     width: 327px;
@@ -222,5 +238,11 @@
     width: 375px;
     font-size: 14px;
     margin-top: 3rem;
+  }
+  .tablet {
+    display: none;
+  }
+  .mobile {
+    display: block;
   }
 }

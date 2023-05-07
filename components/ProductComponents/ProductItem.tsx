@@ -6,25 +6,36 @@ import Link from "next/link";
 import { useEffect } from "react";
 import { sendCartData } from "../../store/cart-actions";
 import Image from "next/image";
+import { Images } from "../../models/Products";
 
 let isInitial = false;
 
 const ProductItem: React.FC<{
   id: number;
   title: string;
-  image: string;
+  image: Images;
   description: string;
   price: number;
   cartImg: string;
   shortName: string;
   category: string;
+  categoryImages: Images;
 }> = (props) => {
   const dispatch = useAppDispatch();
   const qty = useAppSelector((state) => state.cart.quantity);
   const cart = useAppSelector((state) => state.cart);
 
-  const { id, title, image, description, price, cartImg, shortName, category } =
-    props;
+  const {
+    id,
+    title,
+    image,
+    description,
+    price,
+    cartImg,
+    shortName,
+    category,
+    categoryImages,
+  } = props;
   const totalPrice = price + qty;
 
   const addToCartHandler = () => {
@@ -60,17 +71,33 @@ const ProductItem: React.FC<{
   }, [cart, dispatch]);
   return (
     <div className={classes.box}>
-    
       <div className={classes.mainWrapper}>
-      <div className={classes.link}>
-        <Link href={`/${category}`}>Go Back</Link>
-      </div>
+        <div className={classes.link}>
+          <Link href={`/${category}`}>Go Back</Link>
+        </div>
         <div className={classes.container}>
-          <div className={classes.image}>
-            <Image src={image} alt={title}
-             width={540}
-             height={560} />
-          </div>
+          <Image
+            className={classes.desktop}
+            src={categoryImages.desktop}
+            alt={title}
+            width={540}
+            height={560}
+          />
+          <Image
+            className={classes.tablet}
+            src={categoryImages.tablet}
+            alt={title}
+            width={281}
+            height={480}
+          />
+          <Image
+            className={classes.mobile}
+            src={categoryImages.mobile}
+            alt={title}
+            width={327}
+            height={327}
+          />
+
           <div className={classes.content}>
             <h1>{title}</h1>
             <p>{description}</p>
