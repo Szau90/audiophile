@@ -89,6 +89,7 @@
   .bg {
     background-image: url("../../public/images/image-header-mobile.jpg");
     background-size: 100%;
+    background-repeat: no-repeat;
     background-position:center;
     height: 720px;
     justify-content: center;
@@ -112,5 +113,16 @@
   }
   .action {
     width: 35%;
+  }
+}
+@media (max-width:416px) {
+  .bg {
+    background-image: url("../../public/images/image-header-mobile.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position:top;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
   }
 }
