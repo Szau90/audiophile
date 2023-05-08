@@ -76,6 +76,7 @@ export const getStaticProps: GetStaticProps<{
     props: {
       products,
     },
+    revalidate:1
   };
 };
 
