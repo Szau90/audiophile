@@ -55,7 +55,7 @@
   display: none;
 }
 
-@media (max-width:768px) {
+@media (max-width:1024px) {
   .container {
     flex-flow: column nowrap;
   }
@@ -112,7 +112,7 @@
  
 
 }
-@media (max-width:512px) {
+@media (max-width:712px) {
   .container {
     width: 327px;
     

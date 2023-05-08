@@ -16,7 +16,7 @@
 .shopButton:hover {
     color:#FBAF85
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     .shopButton {
         font-size: 0.9rem;
     }

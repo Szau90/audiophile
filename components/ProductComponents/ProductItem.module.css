@@ -121,7 +121,7 @@
   margin-right: 30px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .box {
     display: flex;
     width: 100%;
@@ -193,7 +193,7 @@
   }
 }
 
-@media (max-width: 512px) {
+@media (max-width: 712px) {
   .mainWrapper {
  
     width: 327px;

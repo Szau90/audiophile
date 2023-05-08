@@ -21,7 +21,7 @@
   font-weight: 900;
 }
 
-@media (max-width:768px) {
+@media (max-width:1024px) {
   .sumWrapper {
     width: 698px;
     margin-left: 0;
@@ -42,7 +42,7 @@
   }
 }
 
-@media (max-width:512px) {
+@media (max-width:712px) {
   .sumWrapper {
     width: 327px;
     justify-content: center;

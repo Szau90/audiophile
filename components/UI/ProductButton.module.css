@@ -18,14 +18,14 @@
     background-color: #fbaf85
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .button {
         height: 40px;
         padding: 10px;
     }
 }
 
-@media (max-width: 512px) {
+@media (max-width: 712px) {
     .button {
         height: 40px;
         font-size: 11px;

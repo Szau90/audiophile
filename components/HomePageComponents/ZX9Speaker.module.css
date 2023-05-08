@@ -57,7 +57,7 @@
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .wrapper {
     margin-top: 1rem;
   }
@@ -111,7 +111,7 @@
     justify-content: center;
   }
 }
-@media (max-width: 512px) {
+@media (max-width: 712px) {
   .box {
     width: 327px;
     height: 600px;

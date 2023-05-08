@@ -79,7 +79,7 @@
   cursor: pointer;
 }
 
-@media (max-width: 512px) {
+@media (max-width: 712px) {
   .item {
     justify-content: center;
     width: 100%;

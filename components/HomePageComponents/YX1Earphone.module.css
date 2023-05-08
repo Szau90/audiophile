@@ -36,7 +36,7 @@
   margin-left: 5%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .wrapper {
     margin-bottom: 5rem;
   }
@@ -61,7 +61,7 @@
     letter-spacing: 1.25px;
   }
 }
-@media (max-width: 512px) {
+@media (max-width: 712px) {
   .box {
     display: flex;
     width: 327px;

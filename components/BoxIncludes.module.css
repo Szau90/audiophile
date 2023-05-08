@@ -19,7 +19,7 @@
     font-weight: 900;
 }
 
-@media (max-width:512px) {
+@media (max-width:712px) {
     .incList li {
         margin: 0;
         margin-right: 1rem;

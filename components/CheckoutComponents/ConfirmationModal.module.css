@@ -116,7 +116,7 @@
   color: #d87d4a;
 }
 
-@media (max-width:512px) {
+@media (max-width:712px) {
   .container {
     flex-flow: column nowrap;
   }

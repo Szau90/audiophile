@@ -10,3 +10,14 @@
   color: #d87d4a;
 }
 
+@media (max-width:1024px) {
+  .button {
+    margin-right: 20px;
+  }
+}
+@media (max-width:712px) {
+  .button {
+    margin-right: 0;
+  }
+}
+

@@ -9,13 +9,13 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width:768px) {
+@media (max-width:1024px) {
     .cartCard {
         width: 377px;
         height: 488px;
     }
 }
-@media (max-width:512px) {
+@media (max-width:712px) {
     .cartCard {
         width: 327px;
         height: 488px;

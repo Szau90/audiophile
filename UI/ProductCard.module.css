@@ -9,7 +9,7 @@
    
   }
 
-  @media (max-width:768px) {
+  @media (max-width:1024px) {
     .card {
       width: 689px;
       height: fit-content;
@@ -17,7 +17,7 @@
     }
   }
 
-  @media (max-width:512px) {
+  @media (max-width:712px) {
     .card {
       width: 327px;
       box-shadow: none;

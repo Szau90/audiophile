@@ -40,7 +40,7 @@
   font-weight: 500;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .bg {
     background-image: url("../../public/images/image-header.jpg");
     background-size: cover;
@@ -85,7 +85,7 @@
   }
 }
 
-@media (max-width: 512px) {
+@media (max-width: 712px) {
   .bg {
     background-image: url("../../public/images/image-header-mobile.jpg");
     background-size: 100%;

@@ -113,7 +113,7 @@
   display: grid;
 }
 
-@media (max-width:768px) {
+@media (max-width:1024px) {
   .footerContainer {
     width: 689px;
     margin-left: 2rem;
@@ -168,7 +168,7 @@
   }
 }
 
-@media (max-width:512px) {
+@media (max-width:712px) {
   .footer {
     display: flex;
     margin-top: 3rem;

@@ -69,7 +69,7 @@
   justify-content: center;
 }
 
-@media (max-width:768px) {
+@media (max-width:1024px) {
   .cart {
     top: 10%;
     left: 35%;
@@ -78,7 +78,7 @@
 
 }
 
-@media (max-width:512px) {
+@media (max-width:712px) {
   .cart {
     width: 100%;
     top: 10%;

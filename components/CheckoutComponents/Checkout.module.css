@@ -84,7 +84,7 @@
 .link:hover {
   color: #d87d46;
 }
-@media (max-width:768px) {
+@media (max-width:1024px) {
   .checkoutPage {
     margin-top: 3rem;
     display: flex;
@@ -128,7 +128,7 @@
    }
 }
 
-@media (max-width:512px) {
+@media (max-width:712px) {
   .container {
     width: 327px;
   }
