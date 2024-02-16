@@ -15,11 +15,7 @@ const EmptyCart = () => {
           Your Cart is empty please add some items!
         </h1>
         <Categories />
-        <div className={classes.btn}>
-          <div>
-            <ProductButton name={"back to home"} action={action} />
-          </div>
-        </div>
+        <ProductButton name={"back to home"} action={action}/>
       </div>
     </>
   );

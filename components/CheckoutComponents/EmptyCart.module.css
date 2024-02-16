@@ -1,36 +1,28 @@
 .wrapper {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 }
 .title {
-    width: 1110px;
-    text-align: center;
-    margin-top: 10%;
+  max-width: 1110px;
+  text-align: center;
+  margin-top: 10%;
 }
-.btn {
-
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-.btn div{
-    width: 22rem;
-    margin-top: 10%;
+.wrapper button {
+  width: 90%;
+  max-width: 320px;
 }
 
-@media (max-width:1024px) {
-    .title {
-        width: 768px;
-    }
+@media (max-width: 1024px) {
+  .title {
+    max-width: 768px;
+  }
 }
 
-@media (max-width:512px) {
-    .title {
-        width: 327px;
-        font-size: 25px;
-    }
+@media (max-width: 512px) {
+  .title {
+    max-width: 327px;
+    font-size: 25px;
+  }
 }

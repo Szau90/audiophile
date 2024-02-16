@@ -10,11 +10,11 @@ const manrope = Manrope({ subsets: ["latin"] });
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
-      <main className={manrope.className}>
+      <section className={manrope.className}>
         <Layout>
           <Component {...pageProps} />
         </Layout>
-      </main>
+      </section>
     </Provider>
   );
 }

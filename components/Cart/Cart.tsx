@@ -36,36 +36,30 @@ const Cart = () => {
 
   const cart = (
     <>
-      <div className={classes.wrapper}>
-        <div className={classes.cartContainer}>
-          <div className={classes.header}>
-            <h2>Cart ({cartQuantity})</h2>
-            <button onClick={removeAllHandler}>Remove all</button>
-          </div>
-          <ul className={classes.item}>
-            {cartItems.map((item) => (
-              <CartItem
-                key={item.id}
-                title={item.title}
-                id={item.id}
-                price={item.price}
-                totalPrice={item.totalPrice}
-                quantity={item.quantity}
-                cartImg={item.cartImg}
-                shortName={item.shortName}
-              />
-            ))}
-          </ul>
-          <div className={classes.total}>
-            <p>Total</p>
-            <h3>$ {totalPice}</h3>
-          </div>
-          <div className={classes.checkout}>
-            <div>
-              <ProductButton name={"checkout"} action={action} />
-            </div>
-          </div>
+      <div className={classes.container}>
+        <div className={classes.header}>
+          <h2>Cart ({cartQuantity})</h2>
+          <button onClick={removeAllHandler}>Remove all</button>
         </div>
+        <ul className={classes.items}>
+          {cartItems.map((item) => (
+            <CartItem
+              key={item.id}
+              title={item.title}
+              id={item.id}
+              price={item.price}
+              totalPrice={item.totalPrice}
+              quantity={item.quantity}
+              cartImg={item.cartImg}
+              shortName={item.shortName}
+            />
+          ))}
+        </ul>
+        <div className={classes.total}>
+          <p>Total</p>
+          <h3>$ {totalPice}</h3>
+        </div>
+        <ProductButton name={"checkout"} action={action} />
       </div>
     </>
   );
@@ -85,12 +79,12 @@ const Cart = () => {
   }, [dispatch]);
 
   return (
-    <div className={classes.cart}>
-      <CartCard>
-        {cartIsEmpty && <h1> Your Cart is empty</h1>}
-        {!cartIsEmpty && cart}
-      </CartCard>
-    </div>
+    <CartCard>
+      {cartIsEmpty && (
+        <h1 className={classes.cart_empty}> Your Cart is empty</h1>
+      )}
+      {!cartIsEmpty && cart}
+    </CartCard>
   );
 };
 

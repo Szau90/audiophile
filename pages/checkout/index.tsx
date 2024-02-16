@@ -1,11 +1,10 @@
 import Head from "next/head";
 import Checkout from "../../components/CheckoutComponents/Checkout";
-import Cart from "../../components/Cart/Cart";
 import { useAppSelector } from "../../Hooks/hooks";
 import EmptyCart from "../../components/CheckoutComponents/EmptyCart";
 
 const CheckoutPage = () => {
-  const showCart = useAppSelector((state) => state.ui.cartIsVisible);
+
   const cartItems = useAppSelector((state) => state.cart.items);
   const showCheckout = cartItems.length !== 0;
 
@@ -25,7 +24,6 @@ const CheckoutPage = () => {
           href="/favicon-32x32.png"
         ></link>
       </Head>
-      {showCart && <Cart />}
       {showCheckout && <Checkout />}
       {!showCheckout && <EmptyCart />}
     </>

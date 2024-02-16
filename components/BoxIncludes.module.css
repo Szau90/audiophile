@@ -1,27 +1,29 @@
-.incList {
+.list {
     list-style: none;
     margin-top: 20px;
     display: flex;
     flex-flow: column nowrap;
 }
-.wrapper {
+.list_item {
     display: flex;
-    flex-flow: row nowrap;
 }
-.incList li {
+.list_item p {
  
     font-size: 15px;
     line-height: 25px;
     margin: 10px;
 }
-.incList li:nth-child(1) {
+.list_item p:nth-child(1) {
     color: #d87D4a;
     font-weight: 900;
 }
 
 @media (max-width:712px) {
-    .incList li {
+    .list_item p {
         margin: 0;
-        margin-right: 1rem;
+        
+    }
+    .list_item p:nth-child(1) {
+        margin-right: 16px;
     }
 }

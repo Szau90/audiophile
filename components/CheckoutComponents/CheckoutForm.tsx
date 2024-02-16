@@ -99,9 +99,8 @@ const CheckoutForm: React.FC<{ onOrder: (orderData: Orders) => void }> = ({
 
           <h4>Payment details</h4>
 
-          <div className={classes.payment}>
-            <label htmlFor="emoney">Payment method</label>
-          </div>
+          <h5>Payment method</h5>
+
           <div className={classes.radioGrp}>
             <div className={classes.radio}>
               <input

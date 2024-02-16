@@ -1,52 +1,44 @@
-.wrapper {
-  display: flex;
-  justify-content: center;
-  flex-flow: column nowrap;
-  align-items: center;
-}
 .container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 1110px;
-  gap: 2rem;
-  
-}
-.container img {
-  width: 350px;
-  border-radius: 5px;
-}
-.title {
-  display: flex;
   width: 100%;
-  margin-bottom: 3rem;
-  margin-top: 165px;
+  max-width: 1110px;
+}
+
+.title {
+  margin: 165px 0 48px;
   text-transform: uppercase;
-  justify-content: center;
+  text-align: center;
   font-size: 28px;
   line-height: 38px;
   letter-spacing: 2px;
   font-weight: 900;
 }
+.content {
+  display: flex;
+}
 .item {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
+}
+.item img {
+  border-radius: 10px;
+}
+.item:nth-child(2) {
+  margin: 0 32px;
 }
 .item h1 {
-  display: flex;
-  justify-content: center;
   text-transform: uppercase;
+  text-align: center;
   font-size: 24px;
   line-height: 33px;
   letter-spacing: 1.3px;
-  margin-top: 2rem;
+  margin-top: 32px;
 }
-.action {
-  margin-top: 1rem;
-  width: 160px;
+.content button {
+  margin: 16px 0;
+  width: 100%;
+  max-width: 160px;
 }
 .mobile {
   display: none;
@@ -55,64 +47,36 @@
   display: none;
 }
 
-@media (max-width:1024px) {
-  .wrapper {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-  }
+@media (max-width: 1200px) {
   .container {
-    width: 689px;
-    margin: 0;
-    gap: 10px;
+    max-width: 689px;
+  }
+
+  .title {
+    margin-top: 48px;
   }
   .item img {
-    width: 210px;
-    height: 320px;
+    max-width: 223px;
   }
-  .title {
-    margin-top: 3rem;
-  }
-  .tablet {
-    display: block;
-  }
-  .desktop {
-    display: none;
-  }
-  .action {
-    display: flex;
-    width: 200px;
+  .item:nth-child(2) {
+    margin: 0 10px;
   }
 }
 
-@media (max-width:712px) {
+@media (max-width: 712px) {
   .container {
-    width: 327px;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
+    max-width: 327px;
   }
   .title {
     margin-bottom: 0;
   }
+  .content {
+    flex-direction: column;
+  }
   .item {
-    margin-top: 2rem;
+    margin-top: 32px;
   }
   .item img {
-    width: 327px;
-    height: 120px;
-  }
-  .mobile{
-    display: flex;
-    width: 100%;
-    height: fit-content;
-  }
-  .desktop {
-    display: none;
-  }
-  .tablet {
-    display: none;
+    max-width: 327px;
   }
 }

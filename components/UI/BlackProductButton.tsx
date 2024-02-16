@@ -7,7 +7,7 @@ const manrope = Manrope({ subsets: ["latin"] });
 const BlackProductButton: React.FC<{ link: string }> = ({ link }) => {
   return (
     <div className={`${classes.blackBtn} ${manrope.className}`}>
-      <Link href={link}>See Product</Link>
+      <Link href={link} >See Product</Link>
     </div>
   );
 };

@@ -11,7 +11,7 @@ const CashOnDelivery = () => {
         />
       </svg>
       <span>
-        The `&ldquo;`Cash on Delivery`&ldquo;` option enables you to pay in cash when our
+        The &ldquo;Cash on Delivery&ldquo; option enables you to pay in cash when our
         delivery courier arrives at your residence. Just make sure your address
         is correct so that your order will not be cancelled.
       </span>

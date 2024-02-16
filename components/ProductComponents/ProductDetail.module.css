@@ -1,87 +1,79 @@
-.wrapper {
+.container {
+  width: 100%;
+  max-width: 1110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+.container a {
+  margin: 80px 0;
+}
+.container a:hover {
+  color: #d87d4A;
+}
+.item_details {
   width: 100%;
   display: flex;
-  justify-content: center;
-}
-.box {
-  width: 1110px;
-  display: flex;
-  justify-content: center;
+  justify-content: space-between;
   margin-top: 165px;
 }
+.item_details h1 {
+  text-transform: uppercase;
+  font-weight: 900;
+}
 .features {
-  width: 620px;
-  margin-right: 100px;
+  width: 60%;
+  max-width: 620px;
 }
-.features h1 {
-  text-transform: uppercase;
-  font-weight: 900;
-  margin-bottom: 20px;
-}
+
 .includes {
-  width: 550px;
-}
-.features p {
-  font-size: 15px;
-}
-.includes h1 {
-  text-transform: uppercase;
-  font-weight: 900;
+  width: 30%;
+  max-width: 550px;
 }
 
-@media (max-width: 1024px) {
-  .box {
-    width: 689px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin:0;
-  }
-  .features{
-    width: 100%;
-    margin: 0;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-  }
-  .features h1 {
-    font-size: 25px;
-  }
-  .features p {
-    font-size: 13px;
- 
-  }
-  .includes {
-    width: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-
-  }
-  .includes h1 {
-    font-size: 25px;
-    padding-top: 1rem;
+@media (max-width: 1200px) {
+  .container {
+    max-width: 689px;
    
   }
-  .wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .container a {
+    margin: 40px 0;
   }
-}
-@media (max-width:712px) {
-  .box {
-    width: 327px;
+  .item_details {
+    flex-direction: column;
+    margin-top: 48px;
   }
-  .features p {
-    font-size: 12px;
+  .features {
+    width: 100%;
+    max-width: none;
+   
+  }
+  .item_details h1 {
+    font-size: 25px;
+  }
  
+  .includes {
+    width: 100%;
+    max-width: none;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 48px;
+    
+  }
+  
+}
+@media (max-width: 712px) {
+  .container {
+    max-width: 327px;
   }
   .includes {
     width: 100%;
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-
+    flex-direction: column;
+    
+  }
+  .features p {
+    margin-top: 48px;
   }
 }
-

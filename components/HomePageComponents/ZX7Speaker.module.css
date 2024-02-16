@@ -1,21 +1,19 @@
-.wrapper {
-  width: 1110px;
+.container {
+  width: 100%;
+  max-width: 1110px;
   height: 320px;
-  background-image: url("/images/image-speaker-zx7.jpg");
+  margin: 3rem auto;
+  background: url("/images/image-speaker-zx7.jpg") no-repeat 50% 50% / cover;
   border-radius: 5px;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-
 }
 
-
 .content {
- display: flex;
- flex-flow: column nowrap;
- justify-content: center;
- align-items: flex-start;
- margin-left: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 5rem;
 }
 .content h2 {
   text-transform: uppercase;
@@ -24,43 +22,29 @@
   line-height: 44px;
 }
 
-.box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
-}
-
 @media (max-width: 1024px) {
-    .wrapper {
-        width: 689px;
-        height: 320px;
-        background-image: url("/images/image-speaker-zx7-tablet.jpg");
-    }
-    .content {
-        margin-left: 3rem;
-    }
-    .content h2 {
-        font-size: 32px;
-        line-height: 36px;
-        letter-spacing: 1.25px;
-    }
-   
-  
-}
-@media (max-width:712px) {
-  .wrapper {
-    width: 327px;
+  .container {
+    max-width: 689px;
     height: 320px;
-    background-image: url("/images/image-speaker-zx7-mobile.jpg");
-    background-size: cover;
-
+    background-image: url("/images/image-speaker-zx7-tablet.jpg");
+  }
+  .content {
+    margin-left: 3rem;
+  }
+  .content h2 {
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: 1.25px;
+  }
+}
+@media (max-width: 712px) {
+  .container {
+    max-width: 327px;
+    height: 320px;
+    background: url("/images/image-speaker-zx7-mobile.jpg") no-repeat 50% 50% / cover;
+    margin: 24px auto;
   }
   .content {
     margin-left: 1rem;
-}
-.content div {
-  width: 90%;
-}
-
+  }
 }

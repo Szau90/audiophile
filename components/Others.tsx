@@ -11,9 +11,9 @@ const Others: React.FC<{
 
   return (
     <>
-      <div className={classes.wrapper}>
+      <div className={classes.container}>
         <h1 className={classes.title}>You may also like</h1>
-        <div className={classes.container}>
+        <div className={classes.content}>
           {others.map((item, index) => (
             <div key={index} className={classes.item}>
               <Image
@@ -23,30 +23,15 @@ const Others: React.FC<{
                 width={350}
                 height={325}
               />
-              <Image
-                className={classes.mobile}
-                src={item.mobileImg}
-                alt=""
-                width={327}
-                height={120}
-              />
-              <Image
-                className={classes.tablet}
-                src={item.tabletImg}
-                alt=""
-                width={200}
-                height={200}
-              />
 
               <h1>{item.name}</h1>
-              <div className={classes.action}>
-                <ProductButton
-                  name={"see product"}
-                  action={() => {
-                    router.push(`/${item.category}/${item.slug}`);
-                  }}
-                />
-              </div>
+
+              <ProductButton
+                name={"see product"}
+                action={() => {
+                  router.push(`/${item.category}/${item.slug}`);
+                }}
+              />
             </div>
           ))}
         </div>

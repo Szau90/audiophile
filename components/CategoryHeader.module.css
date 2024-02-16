@@ -1,4 +1,4 @@
-.categoryContainer {
+.container {
     width: 100%;
     height: 200px;
     color: #fff;
@@ -7,7 +7,7 @@
     justify-content: center;
     align-items: center;
 }
-.categoryContainer h1 {
+.container h1 {
     text-transform: uppercase;
     font-size: 40px;
     letter-spacing: 1.5px;
@@ -16,7 +16,7 @@
 }
 
 @media (max-width:712px) {
-    .categoryContainer h1 {
+    .container h1 {
         font-size: 32px;
         line-height: 36px;
         letter-spacing: 1.25px;

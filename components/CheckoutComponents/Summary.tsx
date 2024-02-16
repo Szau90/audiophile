@@ -13,19 +13,13 @@ const Summary: React.FC<{
   return (
     <>
       <li>
-        <div className={classes.sumWrapper}>
-          <div className={classes.sumImg}>
-            <Image src={cartImg} alt={title} width={220} height={200} />
-          </div>
-          <div className={classes.sumContent}>
+        <div className={classes.container}>
+          <Image src={cartImg} alt={title} width={80} height={80}  className={classes.item_image}/>
+          <div className={classes.details}>
             <h4>{title}</h4>
             <p>${price}</p>
           </div>
-          <div className={classes.sumQty}>
-            <p>
-              x {""} {quantity}
-            </p>
-          </div>
+          <p className={classes.qty}>x {quantity}</p>
         </div>
       </li>
     </>

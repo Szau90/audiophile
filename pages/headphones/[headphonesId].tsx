@@ -2,15 +2,12 @@ import Head from "next/head";
 import ProductDetail from "../../components/ProductComponents/ProductDetail";
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next";
 import Products from "../../models/Products";
-import Cart from "../../components/Cart/Cart";
 import { useRouter } from "next/router";
-import { useAppSelector } from "../../Hooks/hooks";
 
 const HeadphonesDetailPage = ({
   products,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const router = useRouter();
-  const showCart = useAppSelector((state) => state.ui.cartIsVisible);
 
   const headphonesId = router.query.headphonesId;
 
@@ -51,7 +48,6 @@ const HeadphonesDetailPage = ({
           href="/favicon-32x32.png"
         ></link>
       </Head>
-      {showCart && <Cart />}
       {headphoneDetail}
     </>
   );

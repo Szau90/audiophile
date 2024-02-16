@@ -1,28 +1,20 @@
 .item {
-  
-    background-color: #f1f1f1;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 0.5rem;
-    padding-bottom: 0.5rem;
-    
-  }
-  
-  .item h3 {
-    font-size: 1rem;
-    
-  }
-  .item p {
-    color: #979797;
-  }
-  
-  .item img {
-    width: 5rem;
-    height: 5rem;
-    border-radius: 5px;
-  }
-  .content {
-    width: 8rem;
-  }
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item h3 {
+  font-size: 16px;
+}
+.item p {
+  color: #979797;
+}
+
+.item img {
+  border-radius: 5px;
+}
+.content {
+ min-width: 100px;
+}

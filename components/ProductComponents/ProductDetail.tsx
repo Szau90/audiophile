@@ -6,6 +6,7 @@ import Gallery from "../Gallery";
 import Others from "../Others";
 import ProductItem from "./ProductItem";
 import { Images, Includes, OthersList } from "../../models/Products";
+import Link from "next/link";
 
 const ProductDetail: React.FC<{
   cartImg: string;
@@ -24,7 +25,7 @@ const ProductDetail: React.FC<{
   includes: Includes[];
   others: OthersList[];
   shortName: string;
-  categoryImages:Images;
+  categoryImages: Images;
 }> = (props) => {
   const {
     id,
@@ -43,19 +44,21 @@ const ProductDetail: React.FC<{
   } = props;
   return (
     <>
-      <ProductItem
-        id={id}
-        title={title}
-        description={description}
-        price={price}
-        image={image}
-        cartImg={cartImg}
-        shortName={shortName}
-        category={category}
-        categoryImages={categoryImages}
-      />
-      <div className={classes.wrapper}>
-        <div className={classes.box}>
+      <section className={classes.container}>
+        <Link href={`/${category}`}>Go Back</Link>
+        <ProductItem
+          id={id}
+          title={title}
+          description={description}
+          price={price}
+          image={image}
+          cartImg={cartImg}
+          shortName={shortName}
+          category={category}
+          categoryImages={categoryImages}
+        />
+
+        <div className={classes.item_details}>
           <div className={classes.features}>
             <h1>Features</h1>
             <p>{features}</p>
@@ -65,12 +68,12 @@ const ProductDetail: React.FC<{
             <BoxIncludes includes={includes} />
           </div>
         </div>
-      </div>
 
-      <Gallery gallery={gallery} />
-      <Others others={others} />
-      <Categories />
-      <BestGear />
+        <Gallery gallery={gallery} />
+        <Others others={others} />
+        <Categories />
+        <BestGear />
+      </section>
     </>
   );
 };

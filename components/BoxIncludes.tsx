@@ -5,12 +5,12 @@ const BoxIncludes: React.FC<{
   includes: Includes[];
 }> = ({ includes }) => {
   return (
-    <ul className={classes.incList}>
+    <ul className={classes.list}>
       {includes.map((include, index) => (
-        <div key={index} className={classes.wrapper}>
-          <li>{include.quantity} x</li>
-          <li>{include.item}</li>
-        </div>
+        <li key={index} className={classes.list_item}>
+          <p>{include.quantity} x</p>
+          <p>{include.item}</p>
+        </li>
       ))}
     </ul>
   );

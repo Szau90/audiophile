@@ -5,13 +5,11 @@ import BestGear from "../../components/BestGear";
 import Categories from "../../components/Categories";
 import CategoryHeader from "../../components/CategoryHeader";
 import ProductList from "../../components/ProductComponents/ProductList";
-import Cart from "../../components/Cart/Cart";
-import { useAppSelector } from "../../Hooks/hooks";
 
 const Earphones = ({
   products,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const showCart = useAppSelector((state) => state.ui.cartIsVisible);
+
 
   const earphones = products
     .filter((p) => p.category === "earphones")
@@ -26,10 +24,6 @@ const Earphones = ({
         slug={product.slug}
       />
     ));
-  const category = products
-    .filter((c) => c.category === "earphones")
-    .map((c) => <CategoryHeader key={c.id} category={c.category} />);
-
   return (
     <>
       <Head>
@@ -46,8 +40,7 @@ const Earphones = ({
           href="/favicon-32x32.png"
         ></link>
       </Head>
-      {showCart && <Cart />}
-      {category}
+      <CategoryHeader category="earphones" />
       {earphones}
       <Categories />
       <BestGear />

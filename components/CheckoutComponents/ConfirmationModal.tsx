@@ -46,76 +46,53 @@ const ConfirmationModal: React.FC<{ grandTotal: number }> = ({
 
   return (
     <>
-      <div className={classes.modalWrapper}>
-        <Card>
-          <div className={classes.header}>
-            <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
-              <g fill="none" fillRule="evenodd">
-                <circle fill="#D87D4A" cx="32" cy="32" r="32" />
-                <path
-                  stroke="#FFF"
-                  strokeWidth="4"
-                  d="m20.754 33.333 6.751 6.751 15.804-15.803"
-                />
-              </g>
-            </svg>
-
-            <h1>
-              Thank you <br />
-              for your order
-            </h1>
-
-            <p>You will recive an e-mail confirmation shortly.</p>
-          </div>
-          <div className={classes.wrapper}>
-            <div className={classes.container}>
-              <div className={classes.firstCol}>
-                <div className={classes.item}>
-                  <div className={classes.firstItem}>
-                    <div>
-                      <Image
-                        src={cartImg}
-                        alt={title}
-                        width={100}
-                        height={100}
-                      />
-                    </div>
-                    <div className={classes.firstItemContent}>
-                      <h3>{title}</h3>
-                      <p>${price}</p>
-                    </div>
-                    <div>
-                      <p>x{qty}</p>
-                    </div>
-                  </div>
-
-                  {showItems && moreItems}
-                </div>
-                <div className={classes.showMore}>
-                  <button
-                    className={classes.itemLeft}
-                    onClick={moreItemHandler}
-                  >
-                    {!showItems && <p> and {itemLeft} other item(s) left</p>}
-                    {showItems && <p>View less</p>}
-                  </button>
-                </div>
-              </div>
-              <div className={classes.secondCol}>
+      <Card>
+        <div className={classes.modal_header}>
+          <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" fillRule="evenodd">
+              <circle fill="#D87D4A" cx="32" cy="32" r="32" />
+              <path
+                stroke="#FFF"
+                strokeWidth="4"
+                d="m20.754 33.333 6.751 6.751 15.804-15.803"
+              />
+            </g>
+          </svg>
+          <h1>
+            Thank you <br />
+            for your order
+          </h1>
+          <p>You will recive an e-mail confirmation shortly.</p>
+        </div>
+        <div className={classes.modal_content}>
+          <div className={classes.firstCol}>
+            <div className={classes.items}>
+              <div className={classes.item}>
                 <div>
-                  <h3>Grand Total</h3>
-                  <p>$ {grandTotal.toFixed(0)}</p>
+                  <Image src={cartImg} alt={title} width={80} height={80} />
+                </div>
+                <div className={classes.content}>
+                  <h3>{title}</h3>
+                  <p>${price}</p>
+                </div>
+                <div>
+                  <p className={classes.qty}>x{qty}</p>
                 </div>
               </div>
+              {showItems && moreItems}
             </div>
+            <button onClick={moreItemHandler}>
+              {!showItems && <p> and {itemLeft} other item(s) left</p>}
+              {showItems && <p>View less</p>}
+            </button>
           </div>
-          <div className={classes.homeBtn}>
-            <div>
-              <ProductButton name={"Back to home"} action={action} />
-            </div>
+          <div className={classes.secondCol}>
+            <h3>Grand Total</h3>
+            <p>$ {grandTotal.toFixed(0)}</p>
           </div>
-        </Card>
-      </div>
+        </div>
+        <ProductButton name={"Back to home"} action={action} />
+      </Card>
     </>
   );
 };

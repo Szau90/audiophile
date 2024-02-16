@@ -1,64 +1,36 @@
-.sumWrapper {
+.container {
   display: flex;
-  width: 30rem;
-  justify-content: flex-start;
+  width: 100%;
+  justify-content: space-between;
   align-items: center;
-  margin-left: 3rem;
+  margin: 16px 0;
 }
-.sumImg img {
-  width: 5rem;
-  height: 5rem;
+.item_image {
   border-radius: 5px;
-  margin-bottom: 1rem;
 }
-.sumContent {
-  width: 7rem;
-  margin-left: 3rem;
+.details {
+  min-width: 100px;
 }
-.sumQty {
-  margin-left: 3rem;
+.qty {
   color: #ccc;
   font-weight: 900;
 }
 
-@media (max-width:1024px) {
-  .sumWrapper {
-    width: 698px;
-    margin-left: 0;
-    justify-content: space-between;
-    align-items: center;
+@media (max-width: 1200px) {
+  .container {
+    max-width: 698px;
+    justify-content: flex-start;
   }
-  .sumImg {
-  margin-left: 3rem;
+  .details {
+    margin: 1rem;
   }
-  .sumContent {
-    margin-left: 0;
-    margin-right: 19rem;
-    padding-bottom: 1rem;
-  }
-  .sumQty {
-    margin-right: 3rem;
-    
+  .qty {
+    margin-left: auto;
   }
 }
 
-@media (max-width:712px) {
-  .sumWrapper {
-    width: 327px;
+@media (max-width: 712px) {
+  .container {
     justify-content: center;
-   
-  }
-  .sumImg {
-    margin-left: 0;
-    margin-right: 1rem;
-    }
-  .sumContent {
-    margin-left: 0;
-    margin-right: 0rem;
-  
-  }
-  .sumQty {
-    margin-right: 0;
-    
   }
 }

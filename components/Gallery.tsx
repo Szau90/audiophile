@@ -14,15 +14,36 @@ const Gallery: React.FC<{
 
   return (
     <>
-      <div className={classes.wrapper}>
-        <div className={classes.gallery}>
-          <div className={classes.firstGalleryCol}>
-            <Image src={firstImg} alt="" width={450} height={280} />
-            <Image src={secondImg} alt="" width={450} height={280} />
-          </div>
-          <div className={classes.secondGalleryCol}>
-            <Image src={thirdImg} alt="" width={625} height={592} />
-          </div>
+      <div className={classes.container}>
+        <div className={classes.item_1}>
+          <Image
+            src={firstImg}
+            alt=""
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            style={{ borderRadius: "10px" ,objectFit: 'cover'}}
+            priority
+          />
+        </div>
+        <div className={classes.item_2}>
+          <Image
+            src={secondImg}
+            alt=""
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            style={{ borderRadius: "10px" ,objectFit: 'cover'}}
+            priority
+          />
+        </div>
+        <div className={classes.item_3}>
+          <Image
+            src={thirdImg}
+            alt=""
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            style={{ borderRadius: "10px" ,objectFit: 'cover'}}
+            priority
+          />
         </div>
       </div>
     </>

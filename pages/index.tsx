@@ -4,12 +4,9 @@ import ZX9Speaker from "../components/HomePageComponents/ZX9Speaker";
 import ZX7Speaker from "../components/HomePageComponents/ZX7Speaker";
 import YX1Earphone from "../components/HomePageComponents/YX1Earphone";
 import BestGear from "../components/BestGear";
-import XX99Headphone from "../components/HomePageComponents/XX99Headphone";
-import Cart from "../components/Cart/Cart";
-import { useAppSelector } from "../Hooks/hooks";
+import Hero from "../components/HomePageComponents/Hero";
 
 const Home = () => {
-  const showCart = useAppSelector((state) => state.ui.cartIsVisible);
   return (
     <>
       <Head>
@@ -27,9 +24,7 @@ const Home = () => {
         ></link>
       </Head>
 
-      {showCart && <Cart />}
-
-      <XX99Headphone />
+      <Hero/>
 
       <Categories />
 

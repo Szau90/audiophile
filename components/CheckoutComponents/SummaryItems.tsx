@@ -12,7 +12,7 @@ const SummaryItems: React.FC<{
     <>
       <div className={classes.item}>
         <div>
-          <Image src={cartImg} alt={title} width={100} height={100} />
+          <Image src={cartImg} alt={title} width={80} height={80} />
         </div>
         <div className={classes.content}>
           <h3>{title}</h3>

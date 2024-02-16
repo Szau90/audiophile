@@ -1,12 +1,9 @@
 import classes from "./Menu.module.css";
 import ShopButton from "../UI/ShopButton";
 import { useRouter } from "next/router";
-import { useAppSelector } from "../../Hooks/hooks";
 import Image from "next/image";
 
 const Menu = () => {
-  const showNavBar = useAppSelector((state) => state.ui.navbarOpen);
-
   const router = useRouter();
 
   const handleHeadPhonesClick = () => {
@@ -21,55 +18,50 @@ const Menu = () => {
 
   return (
     <>
-      <div className={classes.flexContainer}>
-        <div className={classes.container}>
-          <div className={classes.wrapper}>
-            <div className={classes.headphones}>
-              <Image
-                src={"/images/image-category-thumbnail-headphones.png"}
-                alt={"headphones"}
-                className={classes.image}
-                width={100}
-                height={100}
-              />
+      <div className={classes.container}>
+        <div className={classes.menu_item}>
+          <Image
+            src={"/images/image-category-thumbnail-headphones.png"}
+            alt={"headphones"}
+            className={classes.item_image}
+            width={110}
+            height={100}
+          />
 
-              <h3 className={classes.catTitle}>Headphones</h3>
-              <div className={classes.shopBtn}>
-                <ShopButton onClick={handleHeadPhonesClick} />
-              </div>
-            </div>
+          <h3 className={classes.item_title}>Headphones</h3>
+          <div className={classes.cta_btn}>
+            <ShopButton onClick={handleHeadPhonesClick} />
           </div>
-          <div className={classes.wrapper}>
-            <div className={classes.speakers}>
-              <Image
-                src={"/images/image-category-thumbnail-speakers.png"}
-                alt={"speakers"}
-                className={classes.image}
-                width={100}
-                height={100}
-              />
+        </div>
 
-              <h3 className={classes.catTitle}>Speakers</h3>
-              <div className={classes.shopBtn}>
-                <ShopButton onClick={handleSpeakersClick} />
-              </div>
-            </div>
+        <div className={classes.menu_item}>
+          <Image
+            src={"/images/image-category-thumbnail-speakers.png"}
+            alt={"speakers"}
+            className={classes.item_image}
+            width={110}
+            height={100}
+            priority
+          />
+
+          <h3 className={classes.item_title}>Speakers</h3>
+          <div className={classes.cta_btn}>
+            <ShopButton onClick={handleSpeakersClick} />
           </div>
-          <div className={classes.wrapper}>
-            <div className={classes.earphones}>
-              <Image
-                src={"/images/image-category-thumbnail-earphones.png"}
-                alt={"earphones"}
-                className={classes.image}
-                width={100}
-                height={100}
-              />
+        </div>
 
-              <h3 className={classes.catTitle}>Earphones</h3>
-              <div className={classes.shopBtn}>
-                <ShopButton onClick={handleEarPhonesClick} />
-              </div>
-            </div>
+        <div className={classes.menu_item}>
+          <Image
+            src={"/images/image-category-thumbnail-earphones.png"}
+            alt={"earphones"}
+            className={classes.item_image}
+            width={110}
+            height={100}
+          />
+
+          <h3 className={classes.item_title}>Earphones</h3>
+          <div className={classes.cta_btn}>
+            <ShopButton onClick={handleEarPhonesClick} />
           </div>
         </div>
       </div>

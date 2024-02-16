@@ -1,60 +1,58 @@
-.wrapper {
-  display: flex;
-  justify-content: center;
-}
-.container {
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
-  border: 1px solid #000;
-  border-radius: 10px;
-  max-height: fit-content;
-  max-width: fit-content;
-}
-.header {
-  margin-left: 3rem;
-}
-.header svg {
-  margin-top: 3rem;
-}
-.header h1 {
+.modal_header h1 {
   text-transform: uppercase;
   margin-top: 1rem;
   font-size: 40px;
   letter-spacing: 1.5px;
   line-height: 44px;
 }
-.header p {
+.modal_header p {
   margin-top: 1rem;
   color: #979797;
 }
-.firstCol {
+.modal_content {
   display: flex;
-  width: 17rem;
-  flex-direction: column;
+  justify-content: center;
+  margin-top: 2rem;
+  border: 1px solid #000;
+  border-radius: 10px;
+  margin-bottom: 32px;
+}
+.firstCol {
+  width: 70%;
+  min-width: 246px;
+  padding: 8px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   background-color: #f1f1f1;
-}
-.firstCol .itemLeft {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
+}
+
+.firstCol button {
+  width: 80%;
+  padding: 8px;
+  margin: auto;
+  border: none;
+  background-color: #f1f1f1;
   color: #979797;
 }
+
+.firstCol button:hover {
+  color: #d87d4a;
+}
 .secondCol {
+  width: 30%;
+  min-width: 198px;
+  padding: 8px;
   display: flex;
   justify-content: center;
-  width: 12rem;
+  align-items: center;
   flex-direction: column;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   background-color: #000;
-}
-.secondCol div {
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
 }
 .secondCol h3 {
   color: #979797;
@@ -62,63 +60,57 @@
 }
 .secondCol p {
   color: #fff;
+  font-weight: bold;
 }
-.item {
-  background-color: #f1f1f1;
+.items {
   width: 100%;
   display: flex;
-  flex-flow: column wrap;
-  margin: 0.5rem;
-  padding-bottom: 0.5rem;
+  flex-direction: column;
   border-bottom: 1px solid #ccc;
 }
-.item .firstItem {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin: 0.5rem;
+.items h3 {
+  font-size: 16px;
 }
-.firstItemContent {
-  width: 8rem;
+.items p {
+  color: #979797;
+}
+
+.items img {
+  border-radius: 5px;
+}
+.item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .item h3 {
-  font-size: 1rem;
-  margin-right: 3rem;
+  font-size: 16px;
 }
 .item p {
   color: #979797;
 }
 
 .item img {
-  width: 5rem;
-  height: 5rem;
   border-radius: 5px;
 }
-.homeBtn {
-  width: 85%;
-  margin-left: 2.5rem;
-  margin-top: 3rem;
-  padding-bottom: 3rem;
-}
-.showMore {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 0.5rem;
-  padding-bottom: 1rem;
-}
-.showMore button {
-  border: none;
-  background-color: #f1f1f1;
-}
-.showMore button:hover {
-  color: #d87d4a;
+.content {
+  min-width: 100px;
 }
 
-@media (max-width:712px) {
-  .container {
-    flex-flow: column nowrap;
+@media (max-width: 712px) {
+  .modal_header h1 {
+    margin-top: 1rem;
+    font-size: 25px;
+    letter-spacing: 1.15px;
+    line-height: 32px;
+  }
+  .modal_header p {
+    font-size: 14px;
+  }
+  .modal_content {
+    flex-direction: column;
   }
   .firstCol {
     display: flex;
@@ -126,7 +118,6 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-left-radius: 0;
-  
   }
   .secondCol {
     width: 100%;
@@ -134,36 +125,5 @@
     border-top-right-radius: 0;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
-    align-items: flex-start;
-  }
-  .item {
-  
-    width: 90%;
-    margin: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-  .homeBtn {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    margin-left: 0;
-  }
-  .homeBtn div {
-    width: 75%;
-  
-  }
-  .header h1 {
-    margin-top: 1rem;
-    font-size: 25px;
-    letter-spacing: 1.15px;
-    line-height: 32px;
-  }
-  .header p {
-   font-size: 14px;
-  }
-  .secondCol div {
-    margin-left: 2rem ;
-    align-items: flex-start;
   }
 }

@@ -1,4 +1,3 @@
-import ProductCard from "../../UI/ProductCard";
 import classes from "./ProductList.module.css";
 import ProductButton from "../UI/ProductButton";
 import { useRouter } from "next/router";
@@ -18,50 +17,20 @@ const ProductList: React.FC<{
   const action = () => {
     router.push(`/${category}/${slug}`);
   };
-  const newProduct = isNew && <p className={classes.new}>New Product</p>;
+
   return (
     <>
-      <div className={classes.wrapper}>
-        <ProductCard>
-          <ul className={classes.ulist}>
-            <li className={classes.list}>
-              <div className={classes.container}>
-                <div className={classes.content}>
-                  {newProduct}
-                  <h1 className={classes.title}>{title}</h1>
-                  <p className={classes.text}>{description}</p>
-                  <div className={classes.actions}>
-                    <ProductButton name={"see product"} action={action} />
-                  </div>
-                </div>
-               
-                  <Image
-                    className={classes.desktop}
-                    src={image.desktop}
-                    alt={title}
-                    width={555}
-                    height={560}
-                  />
-                    <Image
-                    className={classes.tablet}
-                    src={image.tablet}
-                    alt={title}
-                    width={689}
-                    height={352}
-                  />
-                    <Image
-                    className={classes.mobile}
-                    src={image.mobile}
-                    alt={title}
-                    width={327}
-                    height={352}
-                  />
-                
-              </div>
-            </li>
-          </ul>
-        </ProductCard>
-      </div>
+      <li className={classes.container}>
+        <div className={classes.image_container}>
+          <Image src={image.desktop} alt={title} fill style={{borderRadius: '10px'}} />
+        </div>
+        <div className={classes.content}>
+          {isNew && <p className={classes.new}>New Product</p>}
+          <h1>{title}</h1>
+          <p className={classes.description}>{description}</p>
+          <ProductButton name={"see product"} action={action} />
+        </div>
+      </li>
     </>
   );
 };

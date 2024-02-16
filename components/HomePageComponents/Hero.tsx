@@ -1,8 +1,8 @@
-import classes from "./XX99Headphone.module.css";
+import classes from "./Hero.module.css";
 import ProductButton from "../UI/ProductButton";
 import { useRouter } from "next/router";
 
-const XX99Headphone = () => {
+const Hero = () => {
   const router = useRouter();
   const action = () => {
     router.push("/headphones/xx99-mark-two-headphones");
@@ -10,14 +10,15 @@ const XX99Headphone = () => {
 
   return (
     <>
-      <div className={classes.bg}>
-        <div className={classes.container}>
+      <div className={classes.container}>
+        <div className={classes.bg}>
+        <div className={classes.hero_content}>
           <h4 className={classes.subtitle}>New product</h4>
           <h1 className={classes.title}>
             XX99 Mark II <br />
             Headphones
           </h1>
-          <p className={classes.text}>
+          <p className={classes.description}>
             Experience natural, lifelike audio and exceptional
             <br /> build quality made for the passionate music
             <br /> enthusiast.
@@ -26,9 +27,10 @@ const XX99Headphone = () => {
             <ProductButton name={"see product"} action={action} />
           </div>
         </div>
+        </div>
       </div>
     </>
   );
 };
 
-export default XX99Headphone;
+export default Hero;

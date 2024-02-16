@@ -1,13 +1,20 @@
 import Footer from "./Footer";
 import Header from "./Header";
-import classes from "./Layout.module.css";
+import Menu from "./Menu";
+import Cart from "../../components/Cart/Cart";
+import { useAppSelector } from "../../Hooks/hooks";
 
 type Props = { children: React.ReactNode };
 const Layout: React.FC<Props> = ({ children }) => {
+
+  const showNavbar = useAppSelector((state) => state.ui.navbarOpen);
+  const showCart = useAppSelector((state) => state.ui.cartIsVisible);
   return (
     <>
       <Header />
-      <main className={classes.main}>{children}</main>
+      {showNavbar && <Menu />}
+      {showCart && <Cart />}
+      <main>{children}</main>
       <Footer />
     </>
   );

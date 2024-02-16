@@ -1,15 +1,16 @@
 .card {
+  width: 100%;
+  max-width: 540px;
+  margin: auto;
+  padding: 32px;
   background-color: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  width: 540px;
-  height: fit-content;
-  max-height: 1500px;
-  position: relative;
   border-radius: 10px;
 }
 
 @media (max-width:712px) {
   .card {
-    width: 327px;
+    max-width: 354px;
+    padding: 16px;
   }
 }

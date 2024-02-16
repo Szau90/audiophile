@@ -3,8 +3,7 @@ import classes from "./BestGear.module.css";
 const BestGear = () => {
   return (
     <>
-      <div className={classes.wrapper}>
-        <div className={classes.box}>
+      <div className={classes.container}>
           <div className={classes.content}>
             <h1>
               {" "}
@@ -20,8 +19,8 @@ const BestGear = () => {
               audio equipment.
             </p>
           </div>
-          <div className={classes.img} />
-        </div>
+          <div className={classes.section_image} />
+        
       </div>
     </>
   );

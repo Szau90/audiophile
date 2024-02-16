@@ -1,29 +1,18 @@
-.box {
-  display: flex;
+.container {
   width: 100%;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column nowrap;
+  display: flex;
+  justify-content: space-between;
 }
-.mainWrapper {
-  display: block;
-  width: 1110px;
-  justify-content: center;
-  align-items: center;
-}
-.image {
-  width: 540px;
+.image_container {
+  position: relative;
+  width: 50%;
+  max-width: 540px;
   height: 560px;
-  margin-right: 124.5px;
-}
-.image img {
-  width: 540px;
-  height: 560px;
-  border-radius: 5px;
 }
 .content {
-  width: 445.5px;
-  height: 372px;
+  width: 40%;
+  max-width: 445.5px;
+
 }
 .content h1 {
   font-size: 56px;
@@ -39,25 +28,18 @@
   font-weight: 900;
   margin-top: 50px;
 }
-.container {
+.actions {
   display: flex;
-  width: 1110px;
-  justify-content: center;
+  margin-top: 2rem;
+ 
+  
 }
-.addToCart button {
-  width: 160px;
-  height: 50px;
-  color: #fff;
-  background-color: #d87d4a;
-  text-align: center;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  text-transform: uppercase;
-  border: none;
+.actions button {
+  max-width: 160px;
+ 
 }
-.addToCart button:hover {
-  background-color: #fbaf85;
-}
+
+
 .itemCounter {
   display: flex;
   width: 8rem;
@@ -67,6 +49,7 @@
   padding-bottom: 15px;
   font-size: 13px;
   font-weight: 600;
+  margin-right: 32px;
 }
 
 .itemCounter button {
@@ -85,79 +68,30 @@
 .itemCounter button:active {
   color: #d87d46;
 }
-.wrapper {
-  display: flex;
-  margin-top: 2rem;
-  justify-content: flex-start;
-}
+
 .itemCounter {
   align-items: center;
 }
 .itemCounter button:hover {
   cursor: pointer;
 }
-.addToCart {
-  margin-left: 1rem;
-  align-items: center;
-}
-.link {
-  display: flex;
-  width: 1110px;
-  justify-content: flex-start;
-  color: #979797;
-  margin-top: 100px;
-  margin-bottom: 1rem;
-}
-.link:hover {
-  color: #d87d46;
-}
-.tablet {
-  display: none;
-}
-.mobile {
-  display: none;
-}
-.desktop {
-  margin-right: 30px;
-}
 
-@media (max-width: 1024px) {
-  .box {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-  }
-  .mainWrapper {
- 
-    width: 689px;
-    justify-content: center;
-    align-items: center;
-  }
+
+
+
+@media (max-width: 1200px) {
   .container {
-    width: 689px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    max-width: 689px;
+   
   }
-  .image {
-    margin: 0;
-    width: 50%;
+  .image_container {
+    max-width: 281px;
     height: 480px;
-    background-color: #f1f1f1;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 4rem;
   }
-  .image img {
-    width: 90%;
-    height: 60%;
-  }
+
   .content {
     width: 50%;
-    height: 480px;
+    max-width: 339px;
     display: flex;
     justify-content: flex-end;
     flex-flow: column nowrap;
@@ -168,81 +102,35 @@
     letter-spacing: 1.25px;
     text-align: start;
   }
-  .content p:nth-child(2) {
-    font-size: 13px;
-    text-align: start;
-    width: 300px;
-  }
+ 
   .price {
     font-size: 20px;
   }
-  .addToCart button {
-    width: 140px;
-  }
-  .link {
-    width: 768px;
-    font-size: 14px;
-    margin-top: 3rem;
-  }
-  .desktop {
-    display: none;
-  }
-  .tablet {
-    display: block;
-    margin-right: 30px;
-  }
+  
 }
 
 @media (max-width: 712px) {
-  .mainWrapper {
- 
-    width: 327px;
-    justify-content: center;
-    align-items: center;
-  }
   .container {
-    width: 327px;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
+    max-width: 327px;
+    flex-direction: column;
   }
-  .image {
+  .image_container {
     width: 100%;
-    height: fit-content;
-    margin: 0;
-    justify-content: flex-start;
+    max-width: none;
+    height: 327px;
   }
-  .image img {
-    width: 327px;
-    height: 353px;
-  }
+   
   .content {
     width: 100%;
-    height: 480px;
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-flow: column nowrap;
+    margin-top: 48px;
   }
-  .content p:nth-child(2) {
+ 
+  .actions {
     width: 100%;
   }
-
-  .price {
-    align-self: start;
-  }
-  .wrapper {
-    width: 100%;
-  }
-  .link {
-    width: 375px;
-    font-size: 14px;
-    margin-top: 3rem;
-  }
-  .tablet {
-    display: none;
-  }
-  .mobile {
-    display: block;
-  }
+ 
+  
 }
